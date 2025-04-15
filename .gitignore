@@ -1,0 +1,10 @@
+# 所有可执行文件
+/**/*.exe
+
+#keilIDE编辑器忽略项
+/**/Chassis/MDK-ARM/*
+
+#不忽略keil工程配置文件
+!/**/Chassis/MDK-ARM/*.uvoptx
+!/**/Chassis/MDK-ARM/*.uvprojx
+!/**/Chassis/MDK-ARM/startup_*.s
