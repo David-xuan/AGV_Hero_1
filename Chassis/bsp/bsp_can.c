@@ -1,6 +1,7 @@
 #include "bsp_can.h"
 #include "DJI3508.h"
 #include "can.h"
+#include "DM4310.h"
 
 void can_filter_init(void)
 {
@@ -44,13 +45,15 @@ void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef* _hcan)
 		case CANID_Chassis1:
 		case CANID_Chassis2:
 		case CANID_Chassis3:
-		case CANID_RAMMER:
 		{
 			uint8_t i;
 			i = _RxHeader.StdId - CANID_Chassis0;
 			Motor_3508_receive(&Motor_3508[i],temp,_RxHeader.StdId);
 		}
-			break;
+		break;
+		case RAMMER_MSTID:
+			Motor_DM4310_receive(&Motor_4310_Rammer,temp,RAMMER_CANID);
+		break;
 	}
 
 	/*#### add enable can it again to solve can receive only one ID problem!!!####**/

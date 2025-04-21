@@ -55,7 +55,7 @@ typedef struct
 
 
 /*±‰¡ø*/
-extern pid_type_def M3508_speedloop,M3508_angleloop,Chassis_Follow_PID;
+extern pid_type_def M3508_speedloop[5],M3508_angleloop,Chassis_Follow_PID;
 extern pid_type_def DM4310_Rammer_angleloop,DM4310_Rammer_speedloop;
 extern pid_type_def DM4310_Yaw_angleloop,DM4310_Yaw_speedloop,DM4310_Yaw_Enangleloop; 
 extern pid_type_def DM4310_Yaw_Enangleloop,DM4310_Yaw_Enspeedloop; 	

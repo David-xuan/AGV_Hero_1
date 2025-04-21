@@ -81,7 +81,7 @@
           </BeforeMake>
           <AfterMake>
             <RunUserProg1>0</RunUserProg1>
-            <RunUserProg2>0</RunUserProg2>
+            <RunUserProg2>1</RunUserProg2>
             <UserProg1Name></UserProg1Name>
             <UserProg2Name></UserProg2Name>
             <UserProg1Dos16Mode>0</UserProg1Dos16Mode>
@@ -336,7 +336,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,STM32F407xx</Define>
               <Undefine></Undefine>
-              <IncludePath>../Core/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy;../Middlewares/Third_Party/FreeRTOS/Source/include;../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS;../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F;../Drivers/CMSIS/Device/ST/STM32F4xx/Include;../Drivers/CMSIS/Include;..\task;..\motor;..\bsp;..\calculate</IncludePath>
+              <IncludePath>../Core/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy;../Middlewares/Third_Party/FreeRTOS/Source/include;../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS;../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F;../Drivers/CMSIS/Device/ST/STM32F4xx/Include;../Drivers/CMSIS/Include;../task;../motor;../bsp;../calculate</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -401,6 +401,11 @@
               <FilePath>../Core/Src/gpio.c</FilePath>
             </File>
             <File>
+              <FileName>freertos.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>../Core/Src/freertos.c</FilePath>
+            </File>
+            <File>
               <FileName>can.c</FileName>
               <FileType>1</FileType>
               <FilePath>../Core/Src/can.c</FilePath>
@@ -414,11 +419,6 @@
               <FileName>dma.c</FileName>
               <FileType>1</FileType>
               <FilePath>../Core/Src/dma.c</FilePath>
-            </File>
-            <File>
-              <FileName>freertos.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../Core/Src/freertos.c</FilePath>
             </File>
             <File>
               <FileName>i2c.c</FileName>
@@ -656,14 +656,14 @@
           <GroupName>task</GroupName>
           <Files>
             <File>
-              <FileName>Shoot_task.c</FileName>
+              <FileName>ShootTask.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\task\Shoot_task.c</FilePath>
+              <FilePath>..\task\ShootTask.c</FilePath>
             </File>
             <File>
-              <FileName>Shoot_task.h</FileName>
+              <FileName>ShootTask.h</FileName>
               <FileType>5</FileType>
-              <FilePath>..\task\Shoot_task.h</FilePath>
+              <FilePath>..\task\ShootTask.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -680,6 +680,16 @@
               <FileType>5</FileType>
               <FilePath>..\motor\DJI3508.h</FilePath>
             </File>
+            <File>
+              <FileName>DM4310.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\motor\DM4310.c</FilePath>
+            </File>
+            <File>
+              <FileName>DM4310.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\motor\DM4310.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -694,6 +704,31 @@
               <FileName>bsp_can.h</FileName>
               <FileType>5</FileType>
               <FilePath>..\bsp\bsp_can.h</FilePath>
+            </File>
+            <File>
+              <FileName>bsp_rc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\bsp\bsp_rc.c</FilePath>
+            </File>
+            <File>
+              <FileName>bsp_rc.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\bsp\bsp_rc.h</FilePath>
+            </File>
+            <File>
+              <FileName>remote_control.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\bsp\remote_control.c</FilePath>
+            </File>
+            <File>
+              <FileName>remote_control.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\bsp\remote_control.h</FilePath>
+            </File>
+            <File>
+              <FileName>struct_typedef.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\bsp\struct_typedef.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -719,6 +754,16 @@
               <FileName>my_fun.h</FileName>
               <FileType>5</FileType>
               <FilePath>..\calculate\my_fun.h</FilePath>
+            </File>
+            <File>
+              <FileName>ShootFun.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\calculate\ShootFun.c</FilePath>
+            </File>
+            <File>
+              <FileName>ShootFun.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\calculate\ShootFun.h</FilePath>
             </File>
           </Files>
         </Group>

@@ -59,10 +59,10 @@ osThreadId myTask05Handle;
 /* USER CODE END FunctionPrototypes */
 
 void StartDefaultTask(void const * argument);
-void Gimbal_task(void const * argument);
-void Chassis_task(void const * argument);
-void Shoot_task(void const * argument);
-void UI_task(void const * argument);
+void GimbalTask(void const * argument);
+void ChassisTask(void const * argument);
+void ShootTask(void const * argument);
+void UITask(void const * argument);
 
 void MX_FREERTOS_Init(void); /* (MISRA C 2004 rule 8.1) */
 
@@ -114,19 +114,19 @@ void MX_FREERTOS_Init(void) {
   defaultTaskHandle = osThreadCreate(osThread(defaultTask), NULL);
 
   /* definition and creation of task_01 */
-  osThreadDef(task_01, Gimbal_task, osPriorityIdle, 0, 128);
+  osThreadDef(task_01, GimbalTask, osPriorityIdle, 0, 128);
   task_01Handle = osThreadCreate(osThread(task_01), NULL);
 
   /* definition and creation of myTask03 */
-  osThreadDef(myTask03, Chassis_task, osPriorityIdle, 0, 128);
+  osThreadDef(myTask03, ChassisTask, osPriorityIdle, 0, 128);
   myTask03Handle = osThreadCreate(osThread(myTask03), NULL);
 
   /* definition and creation of myTask04 */
-  osThreadDef(myTask04, Shoot_task, osPriorityIdle, 0, 128);
+  osThreadDef(myTask04, ShootTask, osPriorityIdle, 0, 128);
   myTask04Handle = osThreadCreate(osThread(myTask04), NULL);
 
   /* definition and creation of myTask05 */
-  osThreadDef(myTask05, UI_task, osPriorityIdle, 0, 128);
+  osThreadDef(myTask05, UITask, osPriorityIdle, 0, 128);
   myTask05Handle = osThreadCreate(osThread(myTask05), NULL);
 
   /* USER CODE BEGIN RTOS_THREADS */
@@ -153,76 +153,76 @@ void StartDefaultTask(void const * argument)
   /* USER CODE END StartDefaultTask */
 }
 
-/* USER CODE BEGIN Header_Gimbal_task */
+/* USER CODE BEGIN Header_GimbalTask */
 /**
 * @brief Function implementing the task_01 thread.
 * @param argument: Not used
 * @retval None
 */
-/* USER CODE END Header_Gimbal_task */
-__weak void Gimbal_task(void const * argument)
+/* USER CODE END Header_GimbalTask */
+__weak void GimbalTask(void const * argument)
 {
-  /* USER CODE BEGIN Gimbal_task */
+  /* USER CODE BEGIN GimbalTask */
   /* Infinite loop */
   for(;;)
   {
     osDelay(1);
   }
-  /* USER CODE END Gimbal_task */
+  /* USER CODE END GimbalTask */
 }
 
-/* USER CODE BEGIN Header_Chassis_task */
+/* USER CODE BEGIN Header_ChassisTask */
 /**
 * @brief Function implementing the myTask03 thread.
 * @param argument: Not used
 * @retval None
 */
-/* USER CODE END Header_Chassis_task */
-__weak void Chassis_task(void const * argument)
+/* USER CODE END Header_ChassisTask */
+__weak void ChassisTask(void const * argument)
 {
-  /* USER CODE BEGIN Chassis_task */
+  /* USER CODE BEGIN ChassisTask */
   /* Infinite loop */
   for(;;)
   {
     osDelay(1);
   }
-  /* USER CODE END Chassis_task */
+  /* USER CODE END ChassisTask */
 }
 
-/* USER CODE BEGIN Header_Shoot_task */
+/* USER CODE BEGIN Header_ShootTask */
 /**
 * @brief Function implementing the myTask04 thread.
 * @param argument: Not used
 * @retval None
 */
-/* USER CODE END Header_Shoot_task */
-__weak void Shoot_task(void const * argument)
+/* USER CODE END Header_ShootTask */
+__weak void ShootTask(void const * argument)
 {
-  /* USER CODE BEGIN Shoot_task */
+  /* USER CODE BEGIN ShootTask */
   /* Infinite loop */
   for(;;)
   {
     osDelay(1);
   }
-  /* USER CODE END Shoot_task */
+  /* USER CODE END ShootTask */
 }
 
-/* USER CODE BEGIN Header_UI_task */
+/* USER CODE BEGIN Header_UITask */
 /**
 * @brief Function implementing the myTask05 thread.
 * @param argument: Not used
 * @retval None
 */
-/* USER CODE END Header_UI_task */
-__weak void UI_task(void const * argument)
+/* USER CODE END Header_UITask */
+__weak void UITask(void const * argument)
 {
-  /* USER CODE BEGIN UI_task */
+  /* USER CODE BEGIN UITask */
   /* Infinite loop */
   for(;;)
   {
     osDelay(1);
   }
-  /* USER CODE END UI_task */
+  /* USER CODE END UITask */
 }
 
 /* Private application code --------------------------------------------------*/

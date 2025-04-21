@@ -31,7 +31,7 @@
         }                      \
     }
 /*µ×ÅÌand¸úËæ»·*/
-pid_type_def M3508_speedloop,M3508_angleloop,Chassis_Follow_PID;
+pid_type_def M3508_speedloop[5],M3508_angleloop,Chassis_Follow_PID;
 /*²¦µ¯ÅÌ»·*/
 pid_type_def DM4310_Rammer_angleloop,DM4310_Rammer_speedloop;
 /*YawÍÓÂİÒÇ»·*/
