@@ -15,18 +15,11 @@ void ShootTask(void const * argument)
 	Shoot_Wheel_Init();
 	for(;;)
 	{
-/*
-		Motor_3508[4].target_angle += PI/8;
-		AngleLoop_f(&Motor_3508[4].target_angle , 2*PI);
 		Get_Total_Angle(&Motor_3508[4]);
-		PID_Angle_calc(&M3508_angleloop , Motor_3508[4].total_angle , Motor_3508[4].target_angle , -PI , PI);
-		Motor_3508[4].target_speed_rpm = M3508_angleloop.out;
-		PID_calc(&M3508_speedloop[4] , Motor_3508[4].speed_rpm , Motor_3508[4].target_speed_rpm);
-*/
-		Motor_DM4310_Enable(&hcan1,RAMMER_CANID);
+		
 		if(rc_ctrl.rc.s[1] == 3)
 		{
-			PID_calc(&M3508_speedloop[0] , Motor_3508[0].speed_rpm , -4950);
+			PID_calc(&M3508_speedloop[0] , Motor_3508[0].speed_rpm , -4900);
 			PID_calc(&M3508_speedloop[1] , Motor_3508[1].speed_rpm , 4900);
 			PID_calc(&M3508_speedloop[2] , Motor_3508[2].speed_rpm , -4900);
 		}
@@ -36,7 +29,8 @@ void ShootTask(void const * argument)
 			PID_calc(&M3508_speedloop[1] , Motor_3508[1].speed_rpm , 0);
 			PID_calc(&M3508_speedloop[2] , Motor_3508[2].speed_rpm , 0);
 		}
-		Motor_3508_send(&hcan1 , 0x200 , M3508_speedloop[0].out , M3508_speedloop[1].out , M3508_speedloop[2].out , 0);//M3508_speedloop.out
+//		Motor_3508_send(&hcan1 , 0x200 , M3508_speedloop[0].out , M3508_speedloop[1].out , M3508_speedloop[2].out , 0);//M3508_speedloop.out
+		
 		ShootSelate(&Shoot);//×´Ì¬¿ØÖÆ(Í£Ö¹/ÔËÐÐ)
 		switch(Shoot.State)
 		{
@@ -57,7 +51,7 @@ void ShootTask(void const * argument)
 				break;
 			}
 		}
-		Motor_DM4310_send(&hcan1,RAMMER_CANID, 0, 0, 0, 0, Motor_4310_Rammer.target_torque);//Motor_4310_Rammer.target_torque
+//		Motor_3508_send(&hcan1 , 0x1ff , Motor_3508[4].target_current , 0 , 0 ,0);
 
 		osDelay(1);
 	}

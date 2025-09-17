@@ -1,0 +1,67 @@
+gimbal\main.o: ../Core/Src/main.c
+gimbal\main.o: ../Core/Inc/main.h
+gimbal\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h
+gimbal\main.o: ../Core/Inc/stm32f4xx_hal_conf.h
+gimbal\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h
+gimbal\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h
+gimbal\main.o: ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h
+gimbal\main.o: ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h
+gimbal\main.o: ../Drivers/CMSIS/Include/core_cm4.h
+gimbal\main.o: D:\Program Files (x86)\Keil MDK\ARM\ARMCC\Bin\..\include\stdint.h
+gimbal\main.o: ../Drivers/CMSIS/Include/cmsis_version.h
+gimbal\main.o: ../Drivers/CMSIS/Include/cmsis_compiler.h
+gimbal\main.o: ../Drivers/CMSIS/Include/cmsis_armcc.h
+gimbal\main.o: ../Drivers/CMSIS/Include/mpu_armv7.h
+gimbal\main.o: ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h
+gimbal\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h
+gimbal\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h
+gimbal\main.o: D:\Program Files (x86)\Keil MDK\ARM\ARMCC\Bin\..\include\stddef.h
+gimbal\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h
+gimbal\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h
+gimbal\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio_ex.h
+gimbal\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_exti.h
+gimbal\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h
+gimbal\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h
+gimbal\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h
+gimbal\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_can.h
+gimbal\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h
+gimbal\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h
+gimbal\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h
+gimbal\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h
+gimbal\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h
+gimbal\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h
+gimbal\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h
+gimbal\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
+gimbal\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h
+gimbal\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h
+gimbal\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h
+gimbal\main.o: D:\Program Files (x86)\Keil MDK\ARM\ARMCC\Bin\..\include\stdbool.h
+gimbal\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h
+gimbal\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
+gimbal\main.o: ../Core/Inc/FreeRTOSConfig.h
+gimbal\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
+gimbal\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
+gimbal\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
+gimbal\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F/portmacro.h
+gimbal\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
+gimbal\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h
+gimbal\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h
+gimbal\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h
+gimbal\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h
+gimbal\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h
+gimbal\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h
+gimbal\main.o: ../Core/Inc/can.h
+gimbal\main.o: ../Core/Inc/dma.h
+gimbal\main.o: ../Core/Inc/tim.h
+gimbal\main.o: ../Core/Inc/usart.h
+gimbal\main.o: ../USB_DEVICE/App/usb_device.h
+gimbal\main.o: ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h
+gimbal\main.o: ../USB_DEVICE/Target/usbd_conf.h
+gimbal\main.o: D:\Program Files (x86)\Keil MDK\ARM\ARMCC\Bin\..\include\stdio.h
+gimbal\main.o: D:\Program Files (x86)\Keil MDK\ARM\ARMCC\Bin\..\include\stdlib.h
+gimbal\main.o: D:\Program Files (x86)\Keil MDK\ARM\ARMCC\Bin\..\include\string.h
+gimbal\main.o: ../Core/Inc/gpio.h
+gimbal\main.o: ../bsp/bsp_can.h
+gimbal\main.o: ../bsp/remote_control.h
+gimbal\main.o: ../bsp/bsp_rc.h
+gimbal\main.o: ../bsp/struct_typedef.h

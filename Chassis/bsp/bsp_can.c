@@ -45,6 +45,7 @@ void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef* _hcan)
 		case CANID_Chassis1:
 		case CANID_Chassis2:
 		case CANID_Chassis3:
+		case CANID_RAMMER:
 		{
 			uint8_t i;
 			i = _RxHeader.StdId - CANID_Chassis0;
