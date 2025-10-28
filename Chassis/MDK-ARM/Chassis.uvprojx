@@ -336,7 +336,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,STM32F407xx</Define>
               <Undefine></Undefine>
-              <IncludePath>../Core/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy;../Middlewares/Third_Party/FreeRTOS/Source/include;../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS;../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F;../Drivers/CMSIS/Device/ST/STM32F4xx/Include;../Drivers/CMSIS/Include;../task;../motor;../bsp;../calculate</IncludePath>
+              <IncludePath>../Core/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy;../Middlewares/Third_Party/FreeRTOS/Source/include;../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS;../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F;../Drivers/CMSIS/Device/ST/STM32F4xx/Include;../Drivers/CMSIS/Include;../task;../motor;../calculate;../bsp;../../phoenix_embedded_base_code/Bsp/Can;../../phoenix_embedded_base_code/Bsp/Fdcan;../../phoenix_embedded_base_code/Bsp/Log;../../SEGGER_RTT;../../phoenix_embedded_base_code/Algorithm/Pid;../../phoenix_embedded_base_code/Module/Motor/Dji;../../phoenix_embedded_base_code/Algorithm/Chassis_calc</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -653,17 +653,57 @@
           </Files>
         </Group>
         <Group>
-          <GroupName>task</GroupName>
+          <GroupName>SEGGER_RTT</GroupName>
           <Files>
             <File>
-              <FileName>ShootTask.c</FileName>
+              <FileName>SEGGER_RTT.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\task\ShootTask.c</FilePath>
+              <FilePath>..\..\SEGGER_RTT\SEGGER_RTT.c</FilePath>
             </File>
             <File>
-              <FileName>ShootTask.h</FileName>
+              <FileName>SEGGER_RTT.h</FileName>
               <FileType>5</FileType>
-              <FilePath>..\task\ShootTask.h</FilePath>
+              <FilePath>..\..\SEGGER_RTT\SEGGER_RTT.h</FilePath>
+            </File>
+            <File>
+              <FileName>SEGGER_RTT_Conf.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\SEGGER_RTT\SEGGER_RTT_Conf.h</FilePath>
+            </File>
+            <File>
+              <FileName>SEGGER_RTT_printf.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\SEGGER_RTT\SEGGER_RTT_printf.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>rc</GroupName>
+          <Files>
+            <File>
+              <FileName>bsp_rc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\bsp\bsp_rc.c</FilePath>
+            </File>
+            <File>
+              <FileName>bsp_rc.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\bsp\bsp_rc.h</FilePath>
+            </File>
+            <File>
+              <FileName>remote_control.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\bsp\remote_control.c</FilePath>
+            </File>
+            <File>
+              <FileName>remote_control.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\bsp\remote_control.h</FilePath>
+            </File>
+            <File>
+              <FileName>struct_typedef.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\bsp\struct_typedef.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -693,58 +733,8 @@
           </Files>
         </Group>
         <Group>
-          <GroupName>bsp</GroupName>
-          <Files>
-            <File>
-              <FileName>bsp_can.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\bsp\bsp_can.c</FilePath>
-            </File>
-            <File>
-              <FileName>bsp_can.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\bsp\bsp_can.h</FilePath>
-            </File>
-            <File>
-              <FileName>bsp_rc.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\bsp\bsp_rc.c</FilePath>
-            </File>
-            <File>
-              <FileName>bsp_rc.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\bsp\bsp_rc.h</FilePath>
-            </File>
-            <File>
-              <FileName>remote_control.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\bsp\remote_control.c</FilePath>
-            </File>
-            <File>
-              <FileName>remote_control.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\bsp\remote_control.h</FilePath>
-            </File>
-            <File>
-              <FileName>struct_typedef.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\bsp\struct_typedef.h</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
           <GroupName>calculate</GroupName>
           <Files>
-            <File>
-              <FileName>pid.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\calculate\pid.c</FilePath>
-            </File>
-            <File>
-              <FileName>pid.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\calculate\pid.h</FilePath>
-            </File>
             <File>
               <FileName>my_fun.c</FileName>
               <FileType>1</FileType>
@@ -764,6 +754,111 @@
               <FileName>ShootFun.h</FileName>
               <FileType>5</FileType>
               <FilePath>..\calculate\ShootFun.h</FilePath>
+            </File>
+            <File>
+              <FileName>alg_chassis_calc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\phoenix_embedded_base_code\Algorithm\Chassis_calc\alg_chassis_calc.c</FilePath>
+            </File>
+            <File>
+              <FileName>alg_chassis_calc.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\phoenix_embedded_base_code\Algorithm\Chassis_calc\alg_chassis_calc.h</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>Dji</GroupName>
+          <Files>
+            <File>
+              <FileName>dev_motor_dji.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\phoenix_embedded_base_code\Module\Motor\Dji\dev_motor_dji.c</FilePath>
+            </File>
+            <File>
+              <FileName>dev_motor_dji.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\phoenix_embedded_base_code\Module\Motor\Dji\dev_motor_dji.h</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>Pid</GroupName>
+          <Files>
+            <File>
+              <FileName>alg_pid.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\phoenix_embedded_base_code\Algorithm\Pid\alg_pid.c</FilePath>
+            </File>
+            <File>
+              <FileName>alg_pid.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\phoenix_embedded_base_code\Algorithm\Pid\alg_pid.h</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>Bsp</GroupName>
+          <Files>
+            <File>
+              <FileName>bsp_can.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\phoenix_embedded_base_code\Bsp\Can\bsp_can.c</FilePath>
+            </File>
+            <File>
+              <FileName>bsp_can.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\phoenix_embedded_base_code\Bsp\Can\bsp_can.h</FilePath>
+            </File>
+            <File>
+              <FileName>bsp_fdcan.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\phoenix_embedded_base_code\Bsp\Fdcan\bsp_fdcan.c</FilePath>
+            </File>
+            <File>
+              <FileName>bsp_fdcan.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\phoenix_embedded_base_code\Bsp\Fdcan\bsp_fdcan.h</FilePath>
+            </File>
+            <File>
+              <FileName>bsp_log.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\phoenix_embedded_base_code\Bsp\Log\bsp_log.c</FilePath>
+            </File>
+            <File>
+              <FileName>bsp_log.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\phoenix_embedded_base_code\Bsp\Log\bsp_log.h</FilePath>
+            </File>
+            <File>
+              <FileName>robot_config.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\phoenix_embedded_base_code\Bsp\Can\robot_config.h</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>task</GroupName>
+          <Files>
+            <File>
+              <FileName>ShootTask.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\task\ShootTask.c</FilePath>
+            </File>
+            <File>
+              <FileName>ShootTask.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\task\ShootTask.h</FilePath>
+            </File>
+            <File>
+              <FileName>ChassisTask.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\task\ChassisTask.c</FilePath>
+            </File>
+            <File>
+              <FileName>ChassisTask.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\task\ChassisTask.h</FilePath>
             </File>
           </Files>
         </Group>

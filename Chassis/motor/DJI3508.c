@@ -1,6 +1,6 @@
 #include "DJI3508.h"
 #include "bsp_can.h"
-
+#include "dev_motor_dji.h"
 Motor_3508Type Motor_3508[5];		
 
 void Motor_3508_receive(Motor_3508Type* motor, uint8_t* temp, uint8_t CAN_ID)

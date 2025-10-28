@@ -1,0 +1,3 @@
+[submodule "phoenix_embedded_base_code"]
+	path = phoenix_embedded_base_code
+	url = git@github.com:HDU-PHOENIX/phoenix_embedded_base_code.git
