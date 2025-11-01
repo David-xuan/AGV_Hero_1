@@ -237,11 +237,10 @@ void ChassisTask(void const * argument)
 	Chassis = Chassis_Register(&Chassis_config);
     for(;;){
 		Chassis->gimbal_yaw_angle = 0;//Gimbal->yaw_motor->message.out_position;//这一步为将yaw轴云台编码值数据传给底盘    
-		Chassis->Chassis_speed.Vy = -0.003*rc_ctrl.rc.
-		ch[2];
+		Chassis->Chassis_speed.Vy = -0.003*rc_ctrl.rc.ch[2];
 		Chassis->Chassis_speed.Vx = 0.003*rc_ctrl.rc.ch[3];
 		Chassis_Change_Mode(Chassis,CHASSIS_NORMAL);
-		Chassis_Control(Chassis);
+//		Chassis_Control(Chassis);
 		osDelay(1);
 	}
 }

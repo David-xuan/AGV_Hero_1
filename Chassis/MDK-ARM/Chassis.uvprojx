@@ -336,7 +336,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,STM32F407xx</Define>
               <Undefine></Undefine>
-              <IncludePath>../Core/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy;../Middlewares/Third_Party/FreeRTOS/Source/include;../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS;../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F;../Drivers/CMSIS/Device/ST/STM32F4xx/Include;../Drivers/CMSIS/Include;../task;../motor;../calculate;../bsp;../../phoenix_embedded_base_code/Bsp/Can;../../phoenix_embedded_base_code/Bsp/Fdcan;../../phoenix_embedded_base_code/Bsp/Log;../../SEGGER_RTT;../../phoenix_embedded_base_code/Algorithm/Pid;../../phoenix_embedded_base_code/Module/Motor/Dji;../../phoenix_embedded_base_code/Algorithm/Chassis_calc</IncludePath>
+              <IncludePath>../Core/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy;../Middlewares/Third_Party/FreeRTOS/Source/include;../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS;../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F;../Drivers/CMSIS/Device/ST/STM32F4xx/Include;../Drivers/CMSIS/Include;../task;../motor;../calculate;../bsp;../../phoenix_embedded_base_code/Bsp/Can;../../phoenix_embedded_base_code/Bsp/Fdcan;../../phoenix_embedded_base_code/Bsp/Log;../../SEGGER_RTT;../../phoenix_embedded_base_code/Algorithm/Pid;../../phoenix_embedded_base_code/Module/Motor/Dji;../../phoenix_embedded_base_code/Algorithm/Chassis_calc;..\..\phoenix_embedded_base_code\Module\Motor\Lk</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -678,6 +678,46 @@
           </Files>
         </Group>
         <Group>
+          <GroupName>Bsp</GroupName>
+          <Files>
+            <File>
+              <FileName>bsp_can.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\phoenix_embedded_base_code\Bsp\Can\bsp_can.c</FilePath>
+            </File>
+            <File>
+              <FileName>bsp_can.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\phoenix_embedded_base_code\Bsp\Can\bsp_can.h</FilePath>
+            </File>
+            <File>
+              <FileName>bsp_fdcan.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\phoenix_embedded_base_code\Bsp\Fdcan\bsp_fdcan.c</FilePath>
+            </File>
+            <File>
+              <FileName>bsp_fdcan.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\phoenix_embedded_base_code\Bsp\Fdcan\bsp_fdcan.h</FilePath>
+            </File>
+            <File>
+              <FileName>bsp_log.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\phoenix_embedded_base_code\Bsp\Log\bsp_log.c</FilePath>
+            </File>
+            <File>
+              <FileName>bsp_log.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\phoenix_embedded_base_code\Bsp\Log\bsp_log.h</FilePath>
+            </File>
+            <File>
+              <FileName>robot_config.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\phoenix_embedded_base_code\Bsp\Can\robot_config.h</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
           <GroupName>rc</GroupName>
           <Files>
             <File>
@@ -704,31 +744,6 @@
               <FileName>struct_typedef.h</FileName>
               <FileType>5</FileType>
               <FilePath>..\bsp\struct_typedef.h</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>motor</GroupName>
-          <Files>
-            <File>
-              <FileName>DJI3508.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\motor\DJI3508.c</FilePath>
-            </File>
-            <File>
-              <FileName>DJI3508.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\motor\DJI3508.h</FilePath>
-            </File>
-            <File>
-              <FileName>DM4310.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\motor\DM4310.c</FilePath>
-            </File>
-            <File>
-              <FileName>DM4310.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\motor\DM4310.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -783,6 +798,21 @@
           </Files>
         </Group>
         <Group>
+          <GroupName>Lk</GroupName>
+          <Files>
+            <File>
+              <FileName>dev_motor_lk.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\phoenix_embedded_base_code\Module\Motor\Lk\dev_motor_lk.c</FilePath>
+            </File>
+            <File>
+              <FileName>dev_motor_lk.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\phoenix_embedded_base_code\Module\Motor\Lk\dev_motor_lk.h</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
           <GroupName>Pid</GroupName>
           <Files>
             <File>
@@ -794,46 +824,6 @@
               <FileName>alg_pid.h</FileName>
               <FileType>5</FileType>
               <FilePath>..\..\phoenix_embedded_base_code\Algorithm\Pid\alg_pid.h</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>Bsp</GroupName>
-          <Files>
-            <File>
-              <FileName>bsp_can.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\phoenix_embedded_base_code\Bsp\Can\bsp_can.c</FilePath>
-            </File>
-            <File>
-              <FileName>bsp_can.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\..\phoenix_embedded_base_code\Bsp\Can\bsp_can.h</FilePath>
-            </File>
-            <File>
-              <FileName>bsp_fdcan.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\phoenix_embedded_base_code\Bsp\Fdcan\bsp_fdcan.c</FilePath>
-            </File>
-            <File>
-              <FileName>bsp_fdcan.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\..\phoenix_embedded_base_code\Bsp\Fdcan\bsp_fdcan.h</FilePath>
-            </File>
-            <File>
-              <FileName>bsp_log.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\phoenix_embedded_base_code\Bsp\Log\bsp_log.c</FilePath>
-            </File>
-            <File>
-              <FileName>bsp_log.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\..\phoenix_embedded_base_code\Bsp\Log\bsp_log.h</FilePath>
-            </File>
-            <File>
-              <FileName>robot_config.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\..\phoenix_embedded_base_code\Bsp\Can\robot_config.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -859,6 +849,41 @@
               <FileName>ChassisTask.h</FileName>
               <FileType>5</FileType>
               <FilePath>..\task\ChassisTask.h</FilePath>
+            </File>
+            <File>
+              <FileName>GimbalTask.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\task\GimbalTask.c</FilePath>
+            </File>
+            <File>
+              <FileName>GimbalTask.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\task\GimbalTask.h</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>motor</GroupName>
+          <Files>
+            <File>
+              <FileName>DJI3508.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\motor\DJI3508.c</FilePath>
+            </File>
+            <File>
+              <FileName>DJI3508.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\motor\DJI3508.h</FilePath>
+            </File>
+            <File>
+              <FileName>DM4310.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\motor\DM4310.c</FilePath>
+            </File>
+            <File>
+              <FileName>DM4310.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\motor\DM4310.h</FilePath>
             </File>
           </Files>
         </Group>
