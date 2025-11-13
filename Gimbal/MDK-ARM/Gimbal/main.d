@@ -61,7 +61,9 @@ gimbal\main.o: D:\Program Files (x86)\Keil MDK\ARM\ARMCC\Bin\..\include\stdio.h
 gimbal\main.o: D:\Program Files (x86)\Keil MDK\ARM\ARMCC\Bin\..\include\stdlib.h
 gimbal\main.o: D:\Program Files (x86)\Keil MDK\ARM\ARMCC\Bin\..\include\string.h
 gimbal\main.o: ../Core/Inc/gpio.h
-gimbal\main.o: ../bsp/bsp_can.h
+gimbal\main.o: ../../phoenix_embedded_base_code/Bsp/Can/bsp_can.h
+gimbal\main.o: ../../phoenix_embedded_base_code/Bsp/Can/robot_config.h
+gimbal\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h
 gimbal\main.o: ../bsp/remote_control.h
 gimbal\main.o: ../bsp/bsp_rc.h
 gimbal\main.o: ../bsp/struct_typedef.h

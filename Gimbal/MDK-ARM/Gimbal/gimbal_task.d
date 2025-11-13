@@ -51,11 +51,15 @@ gimbal\gimbal_task.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/timers.
 gimbal\gimbal_task.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h
 gimbal\gimbal_task.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h
 gimbal\gimbal_task.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h
-gimbal\gimbal_task.o: ../calculate/GimbalFun.h
-gimbal\gimbal_task.o: ../motor/DJI3508.h
+gimbal\gimbal_task.o: ../../phoenix_embedded_base_code/Module/Motor/Dm/dev_motor_dm.h
+gimbal\gimbal_task.o: ../../phoenix_embedded_base_code/Bsp/Can/robot_config.h
+gimbal\gimbal_task.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h
+gimbal\gimbal_task.o: ../../phoenix_embedded_base_code/Bsp/Can/bsp_can.h
+gimbal\gimbal_task.o: ../Core/Inc/can.h
+gimbal\gimbal_task.o: D:\Program Files (x86)\Keil MDK\ARM\ARMCC\Bin\..\include\math.h
+gimbal\gimbal_task.o: D:\Program Files (x86)\Keil MDK\ARM\ARMCC\Bin\..\include\string.h
+gimbal\gimbal_task.o: ../../phoenix_embedded_base_code/Algorithm/Pid/alg_pid.h
+gimbal\gimbal_task.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h
 gimbal\gimbal_task.o: ../bsp/remote_control.h
 gimbal\gimbal_task.o: ../bsp/bsp_rc.h
 gimbal\gimbal_task.o: ../bsp/struct_typedef.h
-gimbal\gimbal_task.o: ../calculate/pid.h
-gimbal\gimbal_task.o: ../bsp/bsp_can.h
-gimbal\gimbal_task.o: ../Core/Inc/can.h

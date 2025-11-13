@@ -2,12 +2,14 @@
 #define __SHOOTFUN_H__
 
 #include "ShootTask.h"
+#include "remote_control.h"
+#include "dev_motor_dm.h"
+#include "alg_pid.h"
 
-
-void Shoot_Init(Shoot_t* shoot);
-void Shoot_Wheel_Init(void);
 void Shoot_flag_Init(Shoot_t* shoot);
 void Clean_Shoot_CtrlMsg(Shoot_t* shoot);
+void Clean_Shoot_CtrlMsg(Shoot_t* shoot);
+
 
 void Shoot_Mode_choose_remote(Shoot_t* shoot);
 void Shoot_Mode_Choose(Shoot_t* shoot);

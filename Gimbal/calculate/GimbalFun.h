@@ -2,9 +2,8 @@
 #define GIMBALFUN_H
 
 #include "main.h"
-#include "Gimbal_task.h"
+#include "GimbalTask.h"
 
-void Gimbal_Init(Gimbal_t* gimbal);
 
 
 

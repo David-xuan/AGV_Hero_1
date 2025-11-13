@@ -37,5 +37,20 @@ gimbal\dji3508.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h
 gimbal\dji3508.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h
 gimbal\dji3508.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h
 gimbal\dji3508.o: D:\Program Files (x86)\Keil MDK\ARM\ARMCC\Bin\..\include\stdbool.h
-gimbal\dji3508.o: ../bsp/bsp_can.h
+gimbal\dji3508.o: ..\..\phoenix_embedded_base_code\Bsp\Can\bsp_can.h
+gimbal\dji3508.o: ..\..\phoenix_embedded_base_code\Bsp\Can\robot_config.h
+gimbal\dji3508.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h
+gimbal\dji3508.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
+gimbal\dji3508.o: ../Core/Inc/FreeRTOSConfig.h
+gimbal\dji3508.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
+gimbal\dji3508.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
+gimbal\dji3508.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
+gimbal\dji3508.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F/portmacro.h
+gimbal\dji3508.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
+gimbal\dji3508.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h
+gimbal\dji3508.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h
+gimbal\dji3508.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h
+gimbal\dji3508.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h
+gimbal\dji3508.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h
+gimbal\dji3508.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h
 gimbal\dji3508.o: ../Core/Inc/can.h

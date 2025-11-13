@@ -37,6 +37,7 @@ gimbal\gimbalfun.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h
 gimbal\gimbalfun.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h
 gimbal\gimbalfun.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h
 gimbal\gimbalfun.o: D:\Program Files (x86)\Keil MDK\ARM\ARMCC\Bin\..\include\stdbool.h
-gimbal\gimbalfun.o: ../task/Gimbal_task.h
-gimbal\gimbalfun.o: ../motor/DJI3508.h
-gimbal\gimbalfun.o: ..\calculate\pid.h
+gimbal\gimbalfun.o: ../task/GimbalTask.h
+gimbal\gimbalfun.o: ../bsp/remote_control.h
+gimbal\gimbalfun.o: ../bsp/bsp_rc.h
+gimbal\gimbalfun.o: ../bsp/struct_typedef.h

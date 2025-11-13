@@ -240,7 +240,7 @@ void ChassisTask(void const * argument)
 		Chassis->Chassis_speed.Vy = -0.003*rc_ctrl.rc.ch[2];
 		Chassis->Chassis_speed.Vx = 0.003*rc_ctrl.rc.ch[3];
 		Chassis_Change_Mode(Chassis,CHASSIS_NORMAL);
-//		Chassis_Control(Chassis);
+		Chassis_Control(Chassis);
 		osDelay(1);
 	}
 }

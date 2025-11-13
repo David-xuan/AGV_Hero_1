@@ -49,6 +49,7 @@
 /* USER CODE END Variables */
 osThreadId defaultTaskHandle;
 osThreadId myTask02Handle;
+osThreadId myTask03Handle;
 
 /* Private function prototypes -----------------------------------------------*/
 /* USER CODE BEGIN FunctionPrototypes */
@@ -56,7 +57,8 @@ osThreadId myTask02Handle;
 /* USER CODE END FunctionPrototypes */
 
 void StartDefaultTask(void const * argument);
-void Gimbal_task(void const * argument);
+void GimbalTask(void const * argument);
+void ShootTask(void const * argument);
 
 extern void MX_USB_DEVICE_Init(void);
 void MX_FREERTOS_Init(void); /* (MISRA C 2004 rule 8.1) */
@@ -109,8 +111,12 @@ void MX_FREERTOS_Init(void) {
   defaultTaskHandle = osThreadCreate(osThread(defaultTask), NULL);
 
   /* definition and creation of myTask02 */
-  osThreadDef(myTask02, Gimbal_task, osPriorityHigh, 0, 128);
+  osThreadDef(myTask02, GimbalTask, osPriorityHigh, 0, 128);
   myTask02Handle = osThreadCreate(osThread(myTask02), NULL);
+
+  /* definition and creation of myTask03 */
+  osThreadDef(myTask03, ShootTask, osPriorityIdle, 0, 128);
+  myTask03Handle = osThreadCreate(osThread(myTask03), NULL);
 
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
@@ -138,22 +144,40 @@ void StartDefaultTask(void const * argument)
   /* USER CODE END StartDefaultTask */
 }
 
-/* USER CODE BEGIN Header_Gimbal_task */
+/* USER CODE BEGIN Header_GimbalTask */
 /**
 * @brief Function implementing the myTask02 thread.
 * @param argument: Not used
 * @retval None
 */
-/* USER CODE END Header_Gimbal_task */
-__weak void Gimbal_task(void const * argument)
+/* USER CODE END Header_GimbalTask */
+__weak void GimbalTask(void const * argument)
 {
-  /* USER CODE BEGIN Gimbal_task */
+  /* USER CODE BEGIN GimbalTask */
   /* Infinite loop */
   for(;;)
   {
     osDelay(1);
   }
-  /* USER CODE END Gimbal_task */
+  /* USER CODE END GimbalTask */
+}
+
+/* USER CODE BEGIN Header_ShootTask */
+/**
+* @brief Function implementing the myTask03 thread.
+* @param argument: Not used
+* @retval None
+*/
+/* USER CODE END Header_ShootTask */
+__weak void ShootTask(void const * argument)
+{
+  /* USER CODE BEGIN ShootTask */
+  /* Infinite loop */
+  for(;;)
+  {
+    osDelay(1);
+  }
+  /* USER CODE END ShootTask */
 }
 
 /* Private application code --------------------------------------------------*/

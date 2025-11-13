@@ -1,13 +1,4 @@
 #include "ShootFun.h"
-#include "pid.h"
-#include "DM4310.h"
-#include "DJI3508.h"
-#include "math.h"
-#include "FreeRTOS.h"
-#include "task.h"
-#include "bsp_can.h"
-#include "remote_control.h"
-#include "my_fun.h"
 
 /*声明变量or函数*/
 void Shoot_Statemachine_2_Init(Shoot_t* shoot);
@@ -15,25 +6,6 @@ void Shoot_Statemachine_2_Run(Shoot_t* shoot);
 void Shoot_Statemachine_2_Stop(Shoot_t* shoot);
 
 
-void Shoot_Init(Shoot_t* shoot)
-{
-	Shoot_flag_Init(shoot);
-	
-	float M3508_spdpid1[3] = {32 , 0.78 , 0};
-	float M3508_angpid[3] = {120, 0, 5};
-	PID_init(&M3508_speedloop[4] , PID_POSITION , M3508_spdpid1 , 800 , 16383);
-	PID_init(&M3508_angleloop , PID_POSITION , M3508_angpid , 100 , 1500);
-
-	Motor_3508[4].total_angle = 0;
-}
-
-void Shoot_Wheel_Init(void)
-{
-	float M3508_spdpid0[3] = {8, 0.1 ,0.2};
-	PID_init(&M3508_speedloop[0] , PID_DELTA , M3508_spdpid0 , 2000 , 16383);
-	PID_init(&M3508_speedloop[1] , PID_DELTA , M3508_spdpid0 , 2000 , 16383);		
-	PID_init(&M3508_speedloop[2] , PID_DELTA , M3508_spdpid0 , 2000 , 16383);	
-}
 
 void Shoot_flag_Init(Shoot_t* shoot)
 {
@@ -46,14 +18,17 @@ void Shoot_flag_Init(Shoot_t* shoot)
 	shoot->Action = NORMAL;
 }
 
-//清除控制量及pid
 void Clean_Shoot_CtrlMsg(Shoot_t* shoot)
 {
-	M3508_speedloop[4].out = 0;
-	PID_clear(&M3508_angleloop);
-	PID_clear(&M3508_speedloop[4]);
+	Pid_Disable(rammer->angle_pid);
+	Pid_Disable(rammer->velocity_pid);
 }
 
+void Reset_Shoot_CtrlMsg(Shoot_t* shoot)
+{
+	Pid_Enable(rammer->angle_pid);
+	Pid_Enable(rammer->velocity_pid);
+}
 /****************************************************************拨弹盘模式选择****************************************************************/
 void Shoot_Mode_Choose(Shoot_t* shoot)
 {
@@ -102,12 +77,13 @@ void Shoot_clc(void)
 }
 void Shoor_Ctl_NORMAL(Shoot_t* shoot)
 {
-	PID_calc(&M3508_angleloop , Motor_3508[4].total_angle , Motor_3508[4].target_angle);
-	Motor_3508[4].target_speed_rpm = M3508_angleloop.out;
-	PID_calc(&M3508_speedloop[4] , Motor_3508[4].speed_rpm , Motor_3508[4].target_speed_rpm);
-	Motor_3508[4].target_current = M3508_speedloop[4].out;
+	while(rammer->target_position < -PI)
+		rammer->target_position += 2*PI;
+	while(rammer->target_position > PI)
+		rammer->target_position -= 2*PI;
+	Motor_Dm_Control(rammer, rammer->target_position); // 计算力矩
 /********************************卡弹判断*************************/
-	if(fabsf(Motor_3508[4].target_angle - Motor_3508[4].total_angle)<0.035f) //1°以内
+	if(fabsf(rammer->target_position - rammer->message.out_position)<0.035f) //1°以内
 	{
 		shoot->flag.shoot_finish_flag = 1;
 		shoot->flag.shoot_finish_time = 0;
@@ -119,7 +95,7 @@ void Shoor_Ctl_NORMAL(Shoot_t* shoot)
 		{	
 			shoot->flag.shoot_lock_flag = 1;
 			shoot->flag.shoot_finish_flag = 1;
-			Motor_3508[4].target_angle -= 2*6.6*2*PI;
+			rammer->target_position += 2.0f*PI/12.0f;
 		}
 	}
 /***************裁判系统发射机构断电后保持现位，防止上电发射************/
@@ -139,7 +115,7 @@ void Shoor_Ctl_SINGLE(Shoot_t* shoot)
 {
 	if((!shoot->flag.left_shoot_flag)||(!shoot->flag.wheel_shoot_flag))  //未执行过
 	{
-		Motor_3508[4].target_angle += 6.6*2*PI;		
+		rammer->target_position -= 2.0f*PI/12.0f;		
 		shoot->flag.shoot_finish_flag = 0;		
 		shoot->flag.left_shoot_flag  	= 1;
 		shoot->flag.wheel_shoot_flag 	= 1;		
@@ -155,12 +131,12 @@ void Shoor_Ctl_SINGLE(Shoot_t* shoot)
 
 void Shoor_Ctl_STOP(Shoot_t* shoot)
 {
-	Motor_3508[4].target_current = 0;
+	rammer->output = 0;
 	shoot->flag.shoot_stop_time++;
 	if(shoot->flag.shoot_stop_time>500) 		//放松1s
 	{
 		shoot->flag.shoot_stop_time = 0;	
-		Motor_3508[4].target_angle = Motor_3508[4].total_angle;
+		rammer->target_position = rammer->message.total_angle;
 		shoot->flag.shoot_finish_time = 0;
 		shoot->flag.shoot_lock_flag = 0;
 		shoot->Action = NORMAL;
@@ -198,9 +174,10 @@ void Shoot_Statemachine_2_Run(Shoot_t* shoot)
 	if(shoot->State != SHOOT_Run)
 	{
 		Clean_Shoot_CtrlMsg(shoot);
-		Motor_3508[4].target_angle = Motor_3508[4].total_angle;
+		rammer->target_position = rammer->message.total_angle;
 		//切过去
 		shoot->State = SHOOT_Run;
+		Reset_Shoot_CtrlMsg(shoot);
 	}
 }
 

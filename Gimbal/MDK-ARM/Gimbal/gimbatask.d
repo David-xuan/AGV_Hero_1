@@ -1,0 +1,65 @@
+gimbal\gimbatask.o: ..\task\GimbaTask.c
+gimbal\gimbatask.o: ..\task\GimbalTask.h
+gimbal\gimbatask.o: ../Core/Inc/main.h
+gimbal\gimbatask.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h
+gimbal\gimbatask.o: ../Core/Inc/stm32f4xx_hal_conf.h
+gimbal\gimbatask.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h
+gimbal\gimbatask.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h
+gimbal\gimbatask.o: ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h
+gimbal\gimbatask.o: ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h
+gimbal\gimbatask.o: ../Drivers/CMSIS/Include/core_cm4.h
+gimbal\gimbatask.o: D:\Program Files (x86)\Keil MDK\ARM\ARMCC\Bin\..\include\stdint.h
+gimbal\gimbatask.o: ../Drivers/CMSIS/Include/cmsis_version.h
+gimbal\gimbatask.o: ../Drivers/CMSIS/Include/cmsis_compiler.h
+gimbal\gimbatask.o: ../Drivers/CMSIS/Include/cmsis_armcc.h
+gimbal\gimbatask.o: ../Drivers/CMSIS/Include/mpu_armv7.h
+gimbal\gimbatask.o: ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h
+gimbal\gimbatask.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h
+gimbal\gimbatask.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h
+gimbal\gimbatask.o: D:\Program Files (x86)\Keil MDK\ARM\ARMCC\Bin\..\include\stddef.h
+gimbal\gimbatask.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h
+gimbal\gimbatask.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h
+gimbal\gimbatask.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio_ex.h
+gimbal\gimbatask.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_exti.h
+gimbal\gimbatask.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h
+gimbal\gimbatask.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h
+gimbal\gimbatask.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h
+gimbal\gimbatask.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_can.h
+gimbal\gimbatask.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h
+gimbal\gimbatask.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h
+gimbal\gimbatask.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h
+gimbal\gimbatask.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h
+gimbal\gimbatask.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h
+gimbal\gimbatask.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h
+gimbal\gimbatask.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h
+gimbal\gimbatask.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
+gimbal\gimbatask.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h
+gimbal\gimbatask.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h
+gimbal\gimbatask.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h
+gimbal\gimbatask.o: D:\Program Files (x86)\Keil MDK\ARM\ARMCC\Bin\..\include\stdbool.h
+gimbal\gimbatask.o: ../bsp/remote_control.h
+gimbal\gimbatask.o: ../bsp/bsp_rc.h
+gimbal\gimbatask.o: ../bsp/struct_typedef.h
+gimbal\gimbatask.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h
+gimbal\gimbatask.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
+gimbal\gimbatask.o: ../Core/Inc/FreeRTOSConfig.h
+gimbal\gimbatask.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
+gimbal\gimbatask.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
+gimbal\gimbatask.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
+gimbal\gimbatask.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F/portmacro.h
+gimbal\gimbatask.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
+gimbal\gimbatask.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h
+gimbal\gimbatask.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h
+gimbal\gimbatask.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h
+gimbal\gimbatask.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h
+gimbal\gimbatask.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h
+gimbal\gimbatask.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h
+gimbal\gimbatask.o: ../../phoenix_embedded_base_code/Module/Motor/Dm/dev_motor_dm.h
+gimbal\gimbatask.o: ../../phoenix_embedded_base_code/Bsp/Can/robot_config.h
+gimbal\gimbatask.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h
+gimbal\gimbatask.o: ../../phoenix_embedded_base_code/Bsp/Can/bsp_can.h
+gimbal\gimbatask.o: ../Core/Inc/can.h
+gimbal\gimbatask.o: D:\Program Files (x86)\Keil MDK\ARM\ARMCC\Bin\..\include\math.h
+gimbal\gimbatask.o: D:\Program Files (x86)\Keil MDK\ARM\ARMCC\Bin\..\include\string.h
+gimbal\gimbatask.o: ../../phoenix_embedded_base_code/Algorithm/Pid/alg_pid.h
+gimbal\gimbatask.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h
