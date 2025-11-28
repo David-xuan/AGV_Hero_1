@@ -21,6 +21,8 @@
 #include "cmsis_os.h"
 #include "can.h"
 #include "dma.h"
+#include "i2c.h"
+#include "spi.h"
 #include "tim.h"
 #include "usart.h"
 #include "usb_device.h"
@@ -101,6 +103,9 @@ int main(void)
   MX_TIM1_Init();
   MX_USART6_UART_Init();
   MX_TIM4_Init();
+  MX_I2C3_Init();
+  MX_SPI1_Init();
+  MX_TIM10_Init();
   /* USER CODE BEGIN 2 */
   remote_control_init();
   /* USER CODE END 2 */

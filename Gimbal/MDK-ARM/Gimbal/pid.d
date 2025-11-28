@@ -1,5 +1,5 @@
-gimbal\pid.o: ..\calculate\pid.c
-gimbal\pid.o: ..\calculate\pid.h
+gimbal\pid.o: ..\..\phoenix_embedded_base_code\temp_informality_InsTask\PID.c
+gimbal\pid.o: ..\..\phoenix_embedded_base_code\temp_informality_InsTask\PID.h
 gimbal\pid.o: ../Core/Inc/main.h
 gimbal\pid.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h
 gimbal\pid.o: ../Core/Inc/stm32f4xx_hal_conf.h
@@ -28,8 +28,11 @@ gimbal\pid.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_can.h
 gimbal\pid.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h
 gimbal\pid.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h
 gimbal\pid.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h
+gimbal\pid.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c.h
+gimbal\pid.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c_ex.h
 gimbal\pid.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h
 gimbal\pid.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h
+gimbal\pid.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h
 gimbal\pid.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h
 gimbal\pid.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h
 gimbal\pid.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
@@ -37,4 +40,3 @@ gimbal\pid.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h
 gimbal\pid.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h
 gimbal\pid.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h
 gimbal\pid.o: D:\Program Files (x86)\Keil MDK\ARM\ARMCC\Bin\..\include\stdbool.h
-gimbal\pid.o: D:\Program Files (x86)\Keil MDK\ARM\ARMCC\Bin\..\include\math.h

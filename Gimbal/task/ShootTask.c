@@ -157,8 +157,9 @@ void ShootTask(void const * argument)
 {
 	rammer = Motor_DM_Register(&rammer_config);
     Motor_Dm_Cmd(rammer, DM_CMD_MOTOR_ENABLE);
-    while(rammer->target_position == 0)
+    while(rammer->message.out_position == 0)
     {
+		rammer->output = 0;
 		Motor_Dm_Transmit(rammer);
 		rammer->target_position = rammer->message.out_position;
 		osDelay(1);

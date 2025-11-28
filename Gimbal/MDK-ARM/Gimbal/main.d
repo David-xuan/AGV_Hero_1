@@ -27,8 +27,11 @@ gimbal\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_can.h
 gimbal\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h
 gimbal\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h
 gimbal\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h
+gimbal\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c.h
+gimbal\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c_ex.h
 gimbal\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h
 gimbal\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h
+gimbal\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h
 gimbal\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h
 gimbal\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h
 gimbal\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
@@ -52,6 +55,8 @@ gimbal\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h
 gimbal\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h
 gimbal\main.o: ../Core/Inc/can.h
 gimbal\main.o: ../Core/Inc/dma.h
+gimbal\main.o: ../Core/Inc/i2c.h
+gimbal\main.o: ../Core/Inc/spi.h
 gimbal\main.o: ../Core/Inc/tim.h
 gimbal\main.o: ../Core/Inc/usart.h
 gimbal\main.o: ../USB_DEVICE/App/usb_device.h

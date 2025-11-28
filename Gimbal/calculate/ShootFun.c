@@ -95,7 +95,7 @@ void Shoor_Ctl_NORMAL(Shoot_t* shoot)
 		{	
 			shoot->flag.shoot_lock_flag = 1;
 			shoot->flag.shoot_finish_flag = 1;
-			rammer->target_position += 2.0f*PI/12.0f;
+			rammer->target_position += 4.0f*PI/12.0f;
 		}
 	}
 /***************裁判系统发射机构断电后保持现位，防止上电发射************/
@@ -136,7 +136,7 @@ void Shoor_Ctl_STOP(Shoot_t* shoot)
 	if(shoot->flag.shoot_stop_time>500) 		//放松1s
 	{
 		shoot->flag.shoot_stop_time = 0;	
-		rammer->target_position = rammer->message.total_angle;
+		rammer->target_position = rammer->message.out_position;
 		shoot->flag.shoot_finish_time = 0;
 		shoot->flag.shoot_lock_flag = 0;
 		shoot->Action = NORMAL;
@@ -174,7 +174,7 @@ void Shoot_Statemachine_2_Run(Shoot_t* shoot)
 	if(shoot->State != SHOOT_Run)
 	{
 		Clean_Shoot_CtrlMsg(shoot);
-		rammer->target_position = rammer->message.total_angle;
+		rammer->target_position = rammer->message.out_position;
 		//切过去
 		shoot->State = SHOOT_Run;
 		Reset_Shoot_CtrlMsg(shoot);

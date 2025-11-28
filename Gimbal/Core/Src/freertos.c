@@ -50,6 +50,7 @@
 osThreadId defaultTaskHandle;
 osThreadId myTask02Handle;
 osThreadId myTask03Handle;
+osThreadId InsHandle;
 
 /* Private function prototypes -----------------------------------------------*/
 /* USER CODE BEGIN FunctionPrototypes */
@@ -59,6 +60,7 @@ osThreadId myTask03Handle;
 void StartDefaultTask(void const * argument);
 void GimbalTask(void const * argument);
 void ShootTask(void const * argument);
+void InsTask(void const * argument);
 
 extern void MX_USB_DEVICE_Init(void);
 void MX_FREERTOS_Init(void); /* (MISRA C 2004 rule 8.1) */
@@ -117,6 +119,10 @@ void MX_FREERTOS_Init(void) {
   /* definition and creation of myTask03 */
   osThreadDef(myTask03, ShootTask, osPriorityIdle, 0, 128);
   myTask03Handle = osThreadCreate(osThread(myTask03), NULL);
+
+  /* definition and creation of Ins */
+  osThreadDef(Ins, InsTask, osPriorityIdle, 0, 256);
+  InsHandle = osThreadCreate(osThread(Ins), NULL);
 
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
@@ -178,6 +184,24 @@ __weak void ShootTask(void const * argument)
     osDelay(1);
   }
   /* USER CODE END ShootTask */
+}
+
+/* USER CODE BEGIN Header_InsTask */
+/**
+* @brief Function implementing the Ins thread.
+* @param argument: Not used
+* @retval None
+*/
+/* USER CODE END Header_InsTask */
+__weak void InsTask(void const * argument)
+{
+  /* USER CODE BEGIN InsTask */
+  /* Infinite loop */
+  for(;;)
+  {
+    osDelay(1);
+  }
+  /* USER CODE END InsTask */
 }
 
 /* Private application code --------------------------------------------------*/

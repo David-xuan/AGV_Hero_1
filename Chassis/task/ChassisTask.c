@@ -3,30 +3,12 @@
 #include "dev_motor_dji.h"
 #include "alg_chassis_calc.h"
 #include "remote_control.h"
-
-//DjiMotorInstance_s *Wheel1;
-//DjiMotorInitConfig_s config1 = {
-//    .reduction_ratio = 19.0f,
-//    .control_mode = DJI_VELOCITY,
-//    .type = M3508,
-//    .topic_name = "Wheel1",
-//    .velocity_pid_config = {
-//        .kp = 10.0f,
-//        .ki = 0.0f,
-//        .kd = 0.0f,
-//        .out_max = 10000.0f,
-//	},
-//    .can_config = {
-//        .can_number = 1,
-//        .tx_id = 0x200,
-//        .rx_id = 0x201,
-//    },
-//	};
+#include "GimbalTask.h"
 
 	ChassisInstance_s *Chassis;
 	static ChassisInitConfig_s Chassis_config = {
 	.type = Steering_Wheel,
-	.gimbal_yaw_zero = 0,//1.82637596f,//-0.0312073231f,
+	.gimbal_yaw_zero = 0.178709f,
 	.omni_steering_message={
 	.wheel_radius= 0.058f,
 	.chassis_radius= 0.259f,
@@ -40,10 +22,10 @@
 	.gimbal_steering_normal[2] = 0.8399f,
 	.gimbal_steering_normal[3] = -0.9027f,
 	.gimbal_follow_pid_config={
-	.kp = -3.0f,
+	.kp = 0.0f,
     .ki = 0.0f,
     .kd = 0.0f,
-	.dead_zone = 0.2f,
+	.dead_zone = 0.05f,
     .i_max = 0.0f,
     .out_max = 2 * 3.141593f,
 	},
@@ -227,20 +209,14 @@
 
 void ChassisTask(void const * argument)
 {
-//	Wheel1 = Motor_Dji_Register(&config1);
-//	while(1)
-//	{
-//		Motor_Dji_Control(Wheel1, 100); 
-//        Motor_Dji_Transmit(Wheel1); 
-//		osDelay(1);
-//	}
 	Chassis = Chassis_Register(&Chassis_config);
     for(;;){
-		Chassis->gimbal_yaw_angle = 0;//Gimbal->yaw_motor->message.out_position;//这一步为将yaw轴云台编码值数据传给底盘    
+		Chassis->gimbal_yaw_angle = yaw_motor->out_position;
 		Chassis->Chassis_speed.Vy = -0.003*rc_ctrl.rc.ch[2];
 		Chassis->Chassis_speed.Vx = 0.003*rc_ctrl.rc.ch[3];
 		Chassis_Change_Mode(Chassis,CHASSIS_NORMAL);
 		Chassis_Control(Chassis);
 		osDelay(1);
+		
 	}
 }

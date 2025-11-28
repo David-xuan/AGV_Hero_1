@@ -26,8 +26,11 @@ gimbal\stm32f4xx_hal_pcd_ex.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal
 gimbal\stm32f4xx_hal_pcd_ex.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h
 gimbal\stm32f4xx_hal_pcd_ex.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h
 gimbal\stm32f4xx_hal_pcd_ex.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h
+gimbal\stm32f4xx_hal_pcd_ex.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c.h
+gimbal\stm32f4xx_hal_pcd_ex.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c_ex.h
 gimbal\stm32f4xx_hal_pcd_ex.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h
 gimbal\stm32f4xx_hal_pcd_ex.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h
+gimbal\stm32f4xx_hal_pcd_ex.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h
 gimbal\stm32f4xx_hal_pcd_ex.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h
 gimbal\stm32f4xx_hal_pcd_ex.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h
 gimbal\stm32f4xx_hal_pcd_ex.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h

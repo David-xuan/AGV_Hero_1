@@ -17,7 +17,7 @@ static LkMotorInitConfig_s config = {
 	.tx_id=0x280,
 	},
 	.velocity_pid_config={
-    .kp = 0.88f,
+    .kp = 0.8f,
     .ki = 0.02f,
     .kd = 0.0f,
     .i_max = 200.0f,
