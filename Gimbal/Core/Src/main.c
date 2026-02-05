@@ -32,6 +32,7 @@
 /* USER CODE BEGIN Includes */
 #include "bsp_can.h"
 #include "remote_control.h"
+#include "bsp_dwt.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -107,7 +108,7 @@ int main(void)
   MX_SPI1_Init();
   MX_TIM10_Init();
   /* USER CODE BEGIN 2 */
-  remote_control_init();
+  DWT_Init(168);
   /* USER CODE END 2 */
 
   /* Call init function for freertos objects (in cmsis_os2.c) */

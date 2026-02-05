@@ -72,3 +72,4 @@ gimbal\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h
 gimbal\main.o: ../bsp/remote_control.h
 gimbal\main.o: ../bsp/bsp_rc.h
 gimbal\main.o: ../bsp/struct_typedef.h
+gimbal\main.o: ../IMU_Libs/DWT/bsp_dwt.h

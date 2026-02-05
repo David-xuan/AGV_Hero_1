@@ -50,3 +50,25 @@ gimbal\usbd_cdc_if.o: D:\Program Files (x86)\Keil MDK\ARM\ARMCC\Bin\..\include\s
 gimbal\usbd_cdc_if.o: ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h
 gimbal\usbd_cdc_if.o: ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h
 gimbal\usbd_cdc_if.o: ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h
+gimbal\usbd_cdc_if.o: ../../phoenix_embedded_base_code/Module/Minipc/dev_minipc.h
+gimbal\usbd_cdc_if.o: ../../phoenix_embedded_base_code/Bsp/Can/robot_config.h
+gimbal\usbd_cdc_if.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h
+gimbal\usbd_cdc_if.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
+gimbal\usbd_cdc_if.o: ../Core/Inc/FreeRTOSConfig.h
+gimbal\usbd_cdc_if.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
+gimbal\usbd_cdc_if.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
+gimbal\usbd_cdc_if.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
+gimbal\usbd_cdc_if.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F/portmacro.h
+gimbal\usbd_cdc_if.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
+gimbal\usbd_cdc_if.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h
+gimbal\usbd_cdc_if.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h
+gimbal\usbd_cdc_if.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h
+gimbal\usbd_cdc_if.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h
+gimbal\usbd_cdc_if.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h
+gimbal\usbd_cdc_if.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h
+gimbal\usbd_cdc_if.o: ../../phoenix_embedded_base_code/Module/Com_System/Com_System.h
+gimbal\usbd_cdc_if.o: ../../phoenix_embedded_base_code/Module/Com_System/Queue.h
+gimbal\usbd_cdc_if.o: ../../phoenix_embedded_base_code/Bsp/Log/bsp_log.h
+gimbal\usbd_cdc_if.o: ../../SEGGER_RTT/SEGGER_RTT.h
+gimbal\usbd_cdc_if.o: ../../SEGGER_RTT/SEGGER_RTT_Conf.h
+gimbal\usbd_cdc_if.o: D:\Program Files (x86)\Keil MDK\ARM\ARMCC\Bin\..\include\stdarg.h

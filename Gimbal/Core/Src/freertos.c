@@ -51,6 +51,9 @@ osThreadId defaultTaskHandle;
 osThreadId myTask02Handle;
 osThreadId myTask03Handle;
 osThreadId InsHandle;
+osThreadId myTask05Handle;
+osThreadId myTask06Handle;
+osThreadId myTask07Handle;
 
 /* Private function prototypes -----------------------------------------------*/
 /* USER CODE BEGIN FunctionPrototypes */
@@ -61,6 +64,9 @@ void StartDefaultTask(void const * argument);
 void GimbalTask(void const * argument);
 void ShootTask(void const * argument);
 void InsTask(void const * argument);
+void CanTask(void const * argument);
+void MinipcTask(void const * argument);
+void isttask(void const * argument);
 
 extern void MX_USB_DEVICE_Init(void);
 void MX_FREERTOS_Init(void); /* (MISRA C 2004 rule 8.1) */
@@ -123,6 +129,18 @@ void MX_FREERTOS_Init(void) {
   /* definition and creation of Ins */
   osThreadDef(Ins, InsTask, osPriorityIdle, 0, 256);
   InsHandle = osThreadCreate(osThread(Ins), NULL);
+
+  /* definition and creation of myTask05 */
+  osThreadDef(myTask05, CanTask, osPriorityIdle, 0, 128);
+  myTask05Handle = osThreadCreate(osThread(myTask05), NULL);
+
+  /* definition and creation of myTask06 */
+  osThreadDef(myTask06, MinipcTask, osPriorityIdle, 0, 128);
+  myTask06Handle = osThreadCreate(osThread(myTask06), NULL);
+
+  /* definition and creation of myTask07 */
+  osThreadDef(myTask07, isttask, osPriorityHigh, 0, 256);
+  myTask07Handle = osThreadCreate(osThread(myTask07), NULL);
 
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
@@ -202,6 +220,60 @@ __weak void InsTask(void const * argument)
     osDelay(1);
   }
   /* USER CODE END InsTask */
+}
+
+/* USER CODE BEGIN Header_CanTask */
+/**
+* @brief Function implementing the myTask05 thread.
+* @param argument: Not used
+* @retval None
+*/
+/* USER CODE END Header_CanTask */
+__weak void CanTask(void const * argument)
+{
+  /* USER CODE BEGIN CanTask */
+  /* Infinite loop */
+  for(;;)
+  {
+    osDelay(1);
+  }
+  /* USER CODE END CanTask */
+}
+
+/* USER CODE BEGIN Header_MinipcTask */
+/**
+* @brief Function implementing the myTask06 thread.
+* @param argument: Not used
+* @retval None
+*/
+/* USER CODE END Header_MinipcTask */
+__weak void MinipcTask(void const * argument)
+{
+  /* USER CODE BEGIN MinipcTask */
+  /* Infinite loop */
+  for(;;)
+  {
+    osDelay(1);
+  }
+  /* USER CODE END MinipcTask */
+}
+
+/* USER CODE BEGIN Header_isttask */
+/**
+* @brief Function implementing the myTask07 thread.
+* @param argument: Not used
+* @retval None
+*/
+/* USER CODE END Header_isttask */
+__weak void isttask(void const * argument)
+{
+  /* USER CODE BEGIN isttask */
+  /* Infinite loop */
+  for(;;)
+  {
+    osDelay(1);
+  }
+  /* USER CODE END isttask */
 }
 
 /* Private application code --------------------------------------------------*/

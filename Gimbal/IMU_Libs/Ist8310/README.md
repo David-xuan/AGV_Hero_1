@@ -1,0 +1,48 @@
+# dev_ist8310
+##  使用方法
+首先需要填入配置，具体代码如下：
+``` "C"
+Ist8310_Init_Config_s ist8310_conf = {
+    .gpio_conf_exti = {
+        .exti_mode = GPIO_EXTI_MODE_FALLING,
+        .GPIO_Pin = GPIO_PIN_3,
+        .GPIOx = GPIOG,
+        .gpio_model_callback = NULL,
+    },
+    .gpio_conf_rst = {
+        .exti_mode = GPIO_EXTI_MODE_NONE,
+        .GPIO_Pin = GPIO_PIN_6,
+        .GPIOx = GPIOG,
+        .gpio_model_callback = NULL,
+    },
+    .iic_config = {
+        .handle = &hi2c3,
+        .dev_address = IST8310_IIC_ADDRESS,
+        .work_mode = IIC_BLOCK_MODE,//DMA模式要改一改
+    },
+};
+```
+然后进行实例的声明Ist8310Instance_s *asdf;  
+再注册asdf = Ist8310Init(&ist8310_conf);
+即可使用。（数据储存在实例的mag里，比如asdf.mag[1]之类)
+## 协议解析
+IST8310的单字节读取帧协议如下： 
+1. 发送一个起始信号； 
+2. 发送IST8310的I2C地址和读写位；其中读写位为写（0）； 
+3. 等待IST8310丛机的ACK位； 
+4. 发送IST8310需要读取的寄存器地址； 
+5. 等待IST8310从机的ACK位； 
+6. 又一次产生一个起始信号； 
+7. 在发送IST8310的I2C地址和读写位，读写位为读（1）； 
+8. 在等待IST8310丛机的ACK位后； 
+9. IST8310丛机会发送对应寄存器的数据； 
+10. 由于主机只接受一个字节数据，故而主机不发送ACK位； 
+11. 主机在发送停止信号后，停止这次通信。  
+(多字节读取过程与单字节读取过程不同在于第10步中。 主机接收到一个字节后，主机发送ACK信号，则从机IST8310会接着再发送下一个寄存器的值，直到主机发送一个NACK信号，从机便停止发送数据。 )
+
+## IST8310启动流程：
+首先是对GPIO口和II2硬件（主要是I2C3，这个是IST挂载的位置）进行初始化，这部分以HAL库和BSP库完成。  
+然后需要对IST8310进行重置，以消除垃圾值或者上次上电产生的数据，也就是清除寄存器。这一步由IST重启管脚来实现：  
+重启管脚：  
+然后验证ID，也就是0X10，ID固定在寄存器Who Am I (0x00) 上。（I2C的协议不包含数据，所有从机都会收到数据，根据起始帧中的地址来确定主机是否在访问自己，而IST8310则多设计了一个校验机制）  
+接着需要配置寄存器，将工作模式设置为。。。（施工中）

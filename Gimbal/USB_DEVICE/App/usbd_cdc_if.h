@@ -30,7 +30,8 @@
 #include "usbd_cdc.h"
 
 /* USER CODE BEGIN INCLUDE */
-
+// 回调函数类型定义
+typedef void (*USB_RxCallback_t)(uint8_t* data, uint32_t length);
 /* USER CODE END INCLUDE */
 
 /** @addtogroup STM32_USB_OTG_DEVICE_LIBRARY
@@ -108,7 +109,8 @@ extern USBD_CDC_ItfTypeDef USBD_Interface_fops_FS;
 uint8_t CDC_Transmit_FS(uint8_t* Buf, uint16_t Len);
 
 /* USER CODE BEGIN EXPORTED_FUNCTIONS */
-
+// 注册USB接收回调函数
+void USB_RegisterRxCallback(USB_RxCallback_t callback);
 /* USER CODE END EXPORTED_FUNCTIONS */
 
 /**

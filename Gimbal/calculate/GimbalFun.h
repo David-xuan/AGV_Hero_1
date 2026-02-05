@@ -4,6 +4,8 @@
 #include "main.h"
 #include "GimbalTask.h"
 
+void Gimbal_Mode_Choose(void);
+void KeyboardControlGimbal(void);
 
 
 

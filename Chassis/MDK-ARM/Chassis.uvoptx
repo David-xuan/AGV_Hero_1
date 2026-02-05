@@ -119,11 +119,6 @@
       <TargetDriverDllRegistry>
         <SetRegEntry>
           <Number>0</Number>
-          <Key>DLGUARM</Key>
-          <Name>搭?</Name>
-        </SetRegEntry>
-        <SetRegEntry>
-          <Number>0</Number>
           <Key>ARMRTXEVENTFLAGS</Key>
           <Name>-L70 -Z18 -C0 -M0 -T1</Name>
         </SetRegEntry>
@@ -153,7 +148,24 @@
           <Name>-U-O142 -O2254 -S0 -C0 -N00("ARM CoreSight SW-DP") -D00(2BA01477) -L00(0) -TO18 -TC10000000 -TP21 -TDS8007 -TDT0 -TDC1F -TIEFFFFFFFF -TIP8 -FO7 -FD20000000 -FC800 -FN1 -FF0STM32F4xx_1024.FLM -FS08000000 -FL0100000 -FP0($$Device:STM32F407IGHx$CMSIS\Flash\STM32F4xx_1024.FLM)</Name>
         </SetRegEntry>
       </TargetDriverDllRegistry>
-      <Breakpoint/>
+      <Breakpoint>
+        <Bp>
+          <Number>0</Number>
+          <Type>0</Type>
+          <LineNumber>144</LineNumber>
+          <EnabledFlag>1</EnabledFlag>
+          <Address>134244370</Address>
+          <ByteObject>0</ByteObject>
+          <HtxType>0</HtxType>
+          <ManyObjects>0</ManyObjects>
+          <SizeOfObject>0</SizeOfObject>
+          <BreakByAccess>0</BreakByAccess>
+          <BreakIfRCount>1</BreakIfRCount>
+          <Filename>..\..\phoenix_embedded_base_code\Module\Referee\dev_referee.c</Filename>
+          <ExecCommand></ExecCommand>
+          <Expression>\\Chassis\../../phoenix_embedded_base_code/Module/Referee/dev_referee.c\144</Expression>
+        </Bp>
+      </Breakpoint>
       <WatchWindow1>
         <Ww>
           <count>0</count>
@@ -175,6 +187,16 @@
           <WinNumber>1</WinNumber>
           <ItemText>target_position</ItemText>
         </Ww>
+        <Ww>
+          <count>4</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>Gimbal_msg,0x0A</ItemText>
+        </Ww>
+        <Ww>
+          <count>5</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>ref_instance,0x0A</ItemText>
+        </Ww>
       </WatchWindow1>
       <Tracepoint>
         <THDelay>0</THDelay>
@@ -182,7 +204,7 @@
       <DebugFlag>
         <trace>0</trace>
         <periodic>1</periodic>
-        <aLwin>0</aLwin>
+        <aLwin>1</aLwin>
         <aCover>0</aCover>
         <aSer1>0</aSer1>
         <aSer2>0</aSer2>
@@ -1017,7 +1039,7 @@
 
   <Group>
     <GroupName>rc</GroupName>
-    <tvExp>1</tvExp>
+    <tvExp>0</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <RteFlg>0</RteFlg>
@@ -1096,8 +1118,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\calculate\my_fun.c</PathWithFileName>
-      <FilenameWithoutPath>my_fun.c</FilenameWithoutPath>
+      <PathWithFileName>..\..\phoenix_embedded_base_code\Algorithm\Chassis_calc\alg_chassis_calc.c</PathWithFileName>
+      <FilenameWithoutPath>alg_chassis_calc.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -1108,8 +1130,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\calculate\my_fun.h</PathWithFileName>
-      <FilenameWithoutPath>my_fun.h</FilenameWithoutPath>
+      <PathWithFileName>..\..\phoenix_embedded_base_code\Algorithm\Chassis_calc\alg_chassis_calc.h</PathWithFileName>
+      <FilenameWithoutPath>alg_chassis_calc.h</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -1120,8 +1142,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\calculate\ShootFun.c</PathWithFileName>
-      <FilenameWithoutPath>ShootFun.c</FilenameWithoutPath>
+      <PathWithFileName>..\calculate\ChassisFun.c</PathWithFileName>
+      <FilenameWithoutPath>ChassisFun.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -1132,8 +1154,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\calculate\ShootFun.h</PathWithFileName>
-      <FilenameWithoutPath>ShootFun.h</FilenameWithoutPath>
+      <PathWithFileName>..\calculate\ChassisFun.h</PathWithFileName>
+      <FilenameWithoutPath>ChassisFun.h</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -1144,8 +1166,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\..\phoenix_embedded_base_code\Algorithm\Chassis_calc\alg_chassis_calc.c</PathWithFileName>
-      <FilenameWithoutPath>alg_chassis_calc.c</FilenameWithoutPath>
+      <PathWithFileName>..\calculate\GImbalFun.c</PathWithFileName>
+      <FilenameWithoutPath>GImbalFun.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -1156,8 +1178,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\..\phoenix_embedded_base_code\Algorithm\Chassis_calc\alg_chassis_calc.h</PathWithFileName>
-      <FilenameWithoutPath>alg_chassis_calc.h</FilenameWithoutPath>
+      <PathWithFileName>..\calculate\GImbalFun.h</PathWithFileName>
+      <FilenameWithoutPath>GImbalFun.h</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -1272,30 +1294,6 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\task\ShootTask.c</PathWithFileName>
-      <FilenameWithoutPath>ShootTask.c</FilenameWithoutPath>
-      <RteFlg>0</RteFlg>
-      <bShared>0</bShared>
-    </File>
-    <File>
-      <GroupNumber>13</GroupNumber>
-      <FileNumber>80</FileNumber>
-      <FileType>5</FileType>
-      <tvExp>0</tvExp>
-      <tvExpOptDlg>0</tvExpOptDlg>
-      <bDave2>0</bDave2>
-      <PathWithFileName>..\task\ShootTask.h</PathWithFileName>
-      <FilenameWithoutPath>ShootTask.h</FilenameWithoutPath>
-      <RteFlg>0</RteFlg>
-      <bShared>0</bShared>
-    </File>
-    <File>
-      <GroupNumber>13</GroupNumber>
-      <FileNumber>81</FileNumber>
-      <FileType>1</FileType>
-      <tvExp>0</tvExp>
-      <tvExpOptDlg>0</tvExpOptDlg>
-      <bDave2>0</bDave2>
       <PathWithFileName>..\task\ChassisTask.c</PathWithFileName>
       <FilenameWithoutPath>ChassisTask.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
@@ -1303,7 +1301,7 @@
     </File>
     <File>
       <GroupNumber>13</GroupNumber>
-      <FileNumber>82</FileNumber>
+      <FileNumber>80</FileNumber>
       <FileType>5</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
@@ -1315,7 +1313,7 @@
     </File>
     <File>
       <GroupNumber>13</GroupNumber>
-      <FileNumber>83</FileNumber>
+      <FileNumber>81</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
@@ -1327,7 +1325,7 @@
     </File>
     <File>
       <GroupNumber>13</GroupNumber>
-      <FileNumber>84</FileNumber>
+      <FileNumber>82</FileNumber>
       <FileType>5</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
@@ -1337,38 +1335,62 @@
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
-  </Group>
-
-  <Group>
-    <GroupName>motor</GroupName>
-    <tvExp>1</tvExp>
-    <tvExpOptDlg>0</tvExpOptDlg>
-    <cbSel>0</cbSel>
-    <RteFlg>0</RteFlg>
     <File>
-      <GroupNumber>14</GroupNumber>
+      <GroupNumber>13</GroupNumber>
+      <FileNumber>83</FileNumber>
+      <FileType>1</FileType>
+      <tvExp>0</tvExp>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <bDave2>0</bDave2>
+      <PathWithFileName>..\task\CanTask.c</PathWithFileName>
+      <FilenameWithoutPath>CanTask.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
+    </File>
+    <File>
+      <GroupNumber>13</GroupNumber>
+      <FileNumber>84</FileNumber>
+      <FileType>5</FileType>
+      <tvExp>0</tvExp>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <bDave2>0</bDave2>
+      <PathWithFileName>..\task\CanTask.h</PathWithFileName>
+      <FilenameWithoutPath>CanTask.h</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
+    </File>
+    <File>
+      <GroupNumber>13</GroupNumber>
       <FileNumber>85</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\motor\DJI3508.c</PathWithFileName>
-      <FilenameWithoutPath>DJI3508.c</FilenameWithoutPath>
+      <PathWithFileName>..\task\RefereeTask.c</PathWithFileName>
+      <FilenameWithoutPath>RefereeTask.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
     <File>
-      <GroupNumber>14</GroupNumber>
+      <GroupNumber>13</GroupNumber>
       <FileNumber>86</FileNumber>
       <FileType>5</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\motor\DJI3508.h</PathWithFileName>
-      <FilenameWithoutPath>DJI3508.h</FilenameWithoutPath>
+      <PathWithFileName>..\task\RefereeTask.h</PathWithFileName>
+      <FilenameWithoutPath>RefereeTask.h</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
+  </Group>
+
+  <Group>
+    <GroupName>uart</GroupName>
+    <tvExp>0</tvExp>
+    <tvExpOptDlg>0</tvExpOptDlg>
+    <cbSel>0</cbSel>
+    <RteFlg>0</RteFlg>
     <File>
       <GroupNumber>14</GroupNumber>
       <FileNumber>87</FileNumber>
@@ -1376,8 +1398,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\motor\DM4310.c</PathWithFileName>
-      <FilenameWithoutPath>DM4310.c</FilenameWithoutPath>
+      <PathWithFileName>..\..\phoenix_embedded_base_code\Bsp\Uart\bsp_uart.c</PathWithFileName>
+      <FilenameWithoutPath>bsp_uart.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -1388,8 +1410,140 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\motor\DM4310.h</PathWithFileName>
-      <FilenameWithoutPath>DM4310.h</FilenameWithoutPath>
+      <PathWithFileName>..\..\phoenix_embedded_base_code\Bsp\Uart\bsp_uart.h</PathWithFileName>
+      <FilenameWithoutPath>bsp_uart.h</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
+    </File>
+  </Group>
+
+  <Group>
+    <GroupName>Referee</GroupName>
+    <tvExp>0</tvExp>
+    <tvExpOptDlg>0</tvExpOptDlg>
+    <cbSel>0</cbSel>
+    <RteFlg>0</RteFlg>
+    <File>
+      <GroupNumber>15</GroupNumber>
+      <FileNumber>89</FileNumber>
+      <FileType>1</FileType>
+      <tvExp>0</tvExp>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <bDave2>0</bDave2>
+      <PathWithFileName>..\..\phoenix_embedded_base_code\Module\Referee\dev_referee.c</PathWithFileName>
+      <FilenameWithoutPath>dev_referee.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
+    </File>
+    <File>
+      <GroupNumber>15</GroupNumber>
+      <FileNumber>90</FileNumber>
+      <FileType>5</FileType>
+      <tvExp>0</tvExp>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <bDave2>0</bDave2>
+      <PathWithFileName>..\..\phoenix_embedded_base_code\Module\Referee\dev_referee.h</PathWithFileName>
+      <FilenameWithoutPath>dev_referee.h</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
+    </File>
+    <File>
+      <GroupNumber>15</GroupNumber>
+      <FileNumber>91</FileNumber>
+      <FileType>5</FileType>
+      <tvExp>0</tvExp>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <bDave2>0</bDave2>
+      <PathWithFileName>..\..\phoenix_embedded_base_code\Module\Referee\dev_referee_protocol.h</PathWithFileName>
+      <FilenameWithoutPath>dev_referee_protocol.h</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
+    </File>
+    <File>
+      <GroupNumber>15</GroupNumber>
+      <FileNumber>92</FileNumber>
+      <FileType>1</FileType>
+      <tvExp>0</tvExp>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <bDave2>0</bDave2>
+      <PathWithFileName>..\..\phoenix_embedded_base_code\Module\Referee\dev_referee_ui.c</PathWithFileName>
+      <FilenameWithoutPath>dev_referee_ui.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
+    </File>
+    <File>
+      <GroupNumber>15</GroupNumber>
+      <FileNumber>93</FileNumber>
+      <FileType>5</FileType>
+      <tvExp>0</tvExp>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <bDave2>0</bDave2>
+      <PathWithFileName>..\..\phoenix_embedded_base_code\Module\Referee\dev_referee_ui.h</PathWithFileName>
+      <FilenameWithoutPath>dev_referee_ui.h</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
+    </File>
+  </Group>
+
+  <Group>
+    <GroupName>Daemon</GroupName>
+    <tvExp>0</tvExp>
+    <tvExpOptDlg>0</tvExpOptDlg>
+    <cbSel>0</cbSel>
+    <RteFlg>0</RteFlg>
+    <File>
+      <GroupNumber>16</GroupNumber>
+      <FileNumber>94</FileNumber>
+      <FileType>1</FileType>
+      <tvExp>0</tvExp>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <bDave2>0</bDave2>
+      <PathWithFileName>..\..\phoenix_embedded_base_code\Module\Daemon\dev_daemon.c</PathWithFileName>
+      <FilenameWithoutPath>dev_daemon.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
+    </File>
+    <File>
+      <GroupNumber>16</GroupNumber>
+      <FileNumber>95</FileNumber>
+      <FileType>5</FileType>
+      <tvExp>0</tvExp>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <bDave2>0</bDave2>
+      <PathWithFileName>..\..\phoenix_embedded_base_code\Module\Daemon\dev_daemon.h</PathWithFileName>
+      <FilenameWithoutPath>dev_daemon.h</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
+    </File>
+  </Group>
+
+  <Group>
+    <GroupName>Crc</GroupName>
+    <tvExp>0</tvExp>
+    <tvExpOptDlg>0</tvExpOptDlg>
+    <cbSel>0</cbSel>
+    <RteFlg>0</RteFlg>
+    <File>
+      <GroupNumber>17</GroupNumber>
+      <FileNumber>96</FileNumber>
+      <FileType>1</FileType>
+      <tvExp>0</tvExp>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <bDave2>0</bDave2>
+      <PathWithFileName>..\..\phoenix_embedded_base_code\Algorithm\Crc\alg_crc.c</PathWithFileName>
+      <FilenameWithoutPath>alg_crc.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
+    </File>
+    <File>
+      <GroupNumber>17</GroupNumber>
+      <FileNumber>97</FileNumber>
+      <FileType>5</FileType>
+      <tvExp>0</tvExp>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <bDave2>0</bDave2>
+      <PathWithFileName>..\..\phoenix_embedded_base_code\Algorithm\Crc\alg_crc.h</PathWithFileName>
+      <FilenameWithoutPath>alg_crc.h</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>

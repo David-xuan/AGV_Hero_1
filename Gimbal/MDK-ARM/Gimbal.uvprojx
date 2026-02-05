@@ -311,7 +311,7 @@
           </ArmAdsMisc>
           <Cads>
             <interw>1</interw>
-            <Optim>4</Optim>
+            <Optim>1</Optim>
             <oTime>0</oTime>
             <SplitLS>0</SplitLS>
             <OneElfS>1</OneElfS>
@@ -336,7 +336,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,STM32F407xx</Define>
               <Undefine></Undefine>
-              <IncludePath>../Core/Inc;../USB_DEVICE/App;../USB_DEVICE/Target;../Drivers/STM32F4xx_HAL_Driver/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy;../Middlewares/ST/STM32_USB_Device_Library/Core/Inc;../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc;../Drivers/CMSIS/Device/ST/STM32F4xx/Include;../Drivers/CMSIS/Include;../bsp;../calculate;../task;../Middlewares/Third_Party/FreeRTOS/Source/include;../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS;../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F;../../SEGGER_RTT;../../phoenix_embedded_base_code/Algorithm/Pid;../../phoenix_embedded_base_code/Bsp/Can;../../phoenix_embedded_base_code/Bsp/Fdcan;../../phoenix_embedded_base_code/Bsp/Log;../../phoenix_embedded_base_code/Module/Motor/Dji;../../phoenix_embedded_base_code/Module/Motor/Dm;../../phoenix_embedded_base_code/temp_informality_InsTask</IncludePath>
+              <IncludePath>../Core/Inc;../USB_DEVICE/App;../USB_DEVICE/Target;../Drivers/STM32F4xx_HAL_Driver/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy;../Middlewares/ST/STM32_USB_Device_Library/Core/Inc;../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc;../Drivers/CMSIS/Device/ST/STM32F4xx/Include;../Drivers/CMSIS/Include;../bsp;../calculate;../task;../Middlewares/Third_Party/FreeRTOS/Source/include;../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS;../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F;../../SEGGER_RTT;../../phoenix_embedded_base_code/Algorithm/Pid;../../phoenix_embedded_base_code/Bsp/Can;../../phoenix_embedded_base_code/Bsp/Fdcan;../../phoenix_embedded_base_code/Bsp/Log;../../phoenix_embedded_base_code/Module/Motor/Dji;../../phoenix_embedded_base_code/Module/Motor/Dm;../../phoenix_embedded_base_code/Module/Minipc;../../phoenix_embedded_base_code/Module/Com_System;../IMU_Libs;../IMU_Libs/BMI088;../IMU_Libs/DWT;../IMU_Libs/GPIO;../IMU_Libs/I2c;../IMU_Libs/Ist8310;../IMU_Libs/Kalman;../IMU_Libs/SPI;../IMU_Libs/Uart;../Middlewares/ST/ARM/DSP/Inc</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -1659,16 +1659,6 @@
           <GroupName>calculate</GroupName>
           <Files>
             <File>
-              <FileName>my_fun.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\calculate\my_fun.c</FilePath>
-            </File>
-            <File>
-              <FileName>my_fun.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\calculate\my_fun.h</FilePath>
-            </File>
-            <File>
               <FileName>GimbalFun.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\calculate\GimbalFun.c</FilePath>
@@ -1739,14 +1729,14 @@
           <GroupName>task</GroupName>
           <Files>
             <File>
-              <FileName>GimbalTask.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\task\GimbalTask.h</FilePath>
-            </File>
-            <File>
               <FileName>GimbaTask.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\task\GimbaTask.c</FilePath>
+            </File>
+            <File>
+              <FileName>GimbalTask.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\task\GimbalTask.h</FilePath>
             </File>
             <File>
               <FileName>ShootTask.c</FileName>
@@ -1758,55 +1748,267 @@
               <FileType>5</FileType>
               <FilePath>..\task\ShootTask.h</FilePath>
             </File>
+            <File>
+              <FileName>CanTask.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\task\CanTask.c</FilePath>
+            </File>
+            <File>
+              <FileName>CanTask.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\task\CanTask.h</FilePath>
+            </File>
+            <File>
+              <FileName>MinipcTask.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\task\MinipcTask.c</FilePath>
+            </File>
+            <File>
+              <FileName>MinipcTask.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\task\MinipcTask.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
-          <GroupName>InsTask</GroupName>
+          <GroupName>Minipc</GroupName>
           <Files>
             <File>
-              <FileName>BMI088driver.c</FileName>
+              <FileName>dev_minipc.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\phoenix_embedded_base_code\temp_informality_InsTask\BMI088driver.c</FilePath>
+              <FilePath>..\..\phoenix_embedded_base_code\Module\Minipc\dev_minipc.c</FilePath>
             </File>
             <File>
-              <FileName>BMI088Middleware.c</FileName>
+              <FileName>dev_minipc.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\phoenix_embedded_base_code\Module\Minipc\dev_minipc.h</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>Com_system</GroupName>
+          <Files>
+            <File>
+              <FileName>Com_System.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\phoenix_embedded_base_code\temp_informality_InsTask\BMI088Middleware.c</FilePath>
+              <FilePath>..\..\phoenix_embedded_base_code\Module\Com_System\Com_System.c</FilePath>
             </File>
             <File>
-              <FileName>bsp_imu_pwm.c</FileName>
+              <FileName>Com_System.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\phoenix_embedded_base_code\Module\Com_System\Com_System.h</FilePath>
+            </File>
+            <File>
+              <FileName>Queue.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\phoenix_embedded_base_code\temp_informality_InsTask\bsp_imu_pwm.c</FilePath>
+              <FilePath>..\..\phoenix_embedded_base_code\Module\Com_System\Queue.c</FilePath>
+            </File>
+            <File>
+              <FileName>Queue.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\phoenix_embedded_base_code\Module\Com_System\Queue.h</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>IMU_Libs</GroupName>
+          <Files>
+            <File>
+              <FileName>app_ins_task.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\IMU_Libs\app_ins_task.c</FilePath>
+            </File>
+            <File>
+              <FileName>bmi088_error_check_example.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\IMU_Libs\BMI088\bmi088_error_check_example.c</FilePath>
+            </File>
+            <File>
+              <FileName>dev_bmi088.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\IMU_Libs\BMI088\dev_bmi088.c</FilePath>
+            </File>
+            <File>
+              <FileName>bsp_dwt.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\IMU_Libs\DWT\bsp_dwt.c</FilePath>
+            </File>
+            <File>
+              <FileName>bsp_gpio.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\IMU_Libs\GPIO\bsp_gpio.c</FilePath>
+            </File>
+            <File>
+              <FileName>bsp_iic.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\IMU_Libs\I2c\bsp_iic.c</FilePath>
+            </File>
+            <File>
+              <FileName>dev_ist_8310.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\IMU_Libs\Ist8310\dev_ist_8310.c</FilePath>
+            </File>
+            <File>
+              <FileName>alg_kalman.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\IMU_Libs\Kalman\alg_kalman.c</FilePath>
+            </File>
+            <File>
+              <FileName>alg_quaternionEKF.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\IMU_Libs\Kalman\alg_quaternionEKF.c</FilePath>
+            </File>
+            <File>
+              <FileName>Kalman.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\IMU_Libs\Kalman\Kalman.c</FilePath>
+            </File>
+            <File>
+              <FileName>kalman_filter.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\IMU_Libs\Kalman\kalman_filter.c</FilePath>
             </File>
             <File>
               <FileName>bsp_spi.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\phoenix_embedded_base_code\temp_informality_InsTask\bsp_spi.c</FilePath>
+              <FilePath>..\IMU_Libs\SPI\bsp_spi.c</FilePath>
             </File>
             <File>
-              <FileName>IMU_Task.c</FileName>
+              <FileName>bsp_uart.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\phoenix_embedded_base_code\temp_informality_InsTask\IMU_Task.c</FilePath>
+              <FilePath>..\IMU_Libs\Uart\bsp_uart.c</FilePath>
             </File>
             <File>
-              <FileName>ist8310driver.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\phoenix_embedded_base_code\temp_informality_InsTask\ist8310driver.c</FilePath>
+              <FileName>bsp_spi.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\IMU_Libs\SPI\bsp_spi.h</FilePath>
             </File>
             <File>
-              <FileName>ist8310driver_middleware.c</FileName>
+              <FileName>alg_fliter.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\phoenix_embedded_base_code\temp_informality_InsTask\ist8310driver_middleware.c</FilePath>
+              <FilePath>..\IMU_Libs\alg_fliter.c</FilePath>
+            </File>
+            <File>
+              <FileName>alg_fliter.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\IMU_Libs\alg_fliter.h</FilePath>
+            </File>
+            <File>
+              <FileName>bsp_pwm.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\IMU_Libs\bsp_pwm.c</FilePath>
+            </File>
+            <File>
+              <FileName>bsp_pwm.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\IMU_Libs\bsp_pwm.h</FilePath>
             </File>
             <File>
               <FileName>MahonyAHRS.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\phoenix_embedded_base_code\temp_informality_InsTask\MahonyAHRS.c</FilePath>
+              <FilePath>..\IMU_Libs\MahonyAHRS.c</FilePath>
             </File>
             <File>
-              <FileName>PID.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\phoenix_embedded_base_code\temp_informality_InsTask\PID.c</FilePath>
+              <FileName>MahonyAHRS.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\IMU_Libs\MahonyAHRS.h</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>Middlewares/Library/DSP Library/DSP Library</GroupName>
+          <GroupOption>
+            <CommonProperty>
+              <UseCPPCompiler>0</UseCPPCompiler>
+              <RVCTCodeConst>0</RVCTCodeConst>
+              <RVCTZI>0</RVCTZI>
+              <RVCTOtherData>0</RVCTOtherData>
+              <ModuleSelection>0</ModuleSelection>
+              <IncludeInBuild>2</IncludeInBuild>
+              <AlwaysBuild>2</AlwaysBuild>
+              <GenerateAssemblyFile>2</GenerateAssemblyFile>
+              <AssembleAssemblyFile>2</AssembleAssemblyFile>
+              <PublicsOnly>2</PublicsOnly>
+              <StopOnExitCode>11</StopOnExitCode>
+              <CustomArgument></CustomArgument>
+              <IncludeLibraryModules></IncludeLibraryModules>
+              <ComprImg>1</ComprImg>
+            </CommonProperty>
+            <GroupArmAds>
+              <Cads>
+                <interw>2</interw>
+                <Optim>0</Optim>
+                <oTime>2</oTime>
+                <SplitLS>2</SplitLS>
+                <OneElfS>2</OneElfS>
+                <Strict>2</Strict>
+                <EnumInt>2</EnumInt>
+                <PlainCh>2</PlainCh>
+                <Ropi>2</Ropi>
+                <Rwpi>2</Rwpi>
+                <wLevel>4</wLevel>
+                <uThumb>2</uThumb>
+                <uSurpInc>2</uSurpInc>
+                <uC99>2</uC99>
+                <useXO>2</useXO>
+                <v6Lang>0</v6Lang>
+                <v6LangP>0</v6LangP>
+                <vShortEn>2</vShortEn>
+                <vShortWch>2</vShortWch>
+                <v6Lto>2</v6Lto>
+                <v6WtE>2</v6WtE>
+                <v6Rtti>2</v6Rtti>
+                <VariousControls>
+                  <MiscControls></MiscControls>
+                  <Define></Define>
+                  <Undefine></Undefine>
+                  <IncludePath></IncludePath>
+                </VariousControls>
+              </Cads>
+              <Aads>
+                <interw>2</interw>
+                <Ropi>2</Ropi>
+                <Rwpi>2</Rwpi>
+                <thumb>2</thumb>
+                <SplitLS>2</SplitLS>
+                <SwStkChk>2</SwStkChk>
+                <NoWarn>2</NoWarn>
+                <uSurpInc>2</uSurpInc>
+                <useXO>2</useXO>
+                <uClangAs>2</uClangAs>
+                <VariousControls>
+                  <MiscControls></MiscControls>
+                  <Define></Define>
+                  <Undefine></Undefine>
+                  <IncludePath></IncludePath>
+                </VariousControls>
+              </Aads>
+            </GroupArmAds>
+          </GroupOption>
+          <Files>
+            <File>
+              <FileName>arm_cortexM4lf_math.lib</FileName>
+              <FileType>4</FileType>
+              <FilePath>../Middlewares/ST/ARM/DSP/Lib/arm_cortexM4lf_math.lib</FilePath>
+              <FileOption>
+                <CommonProperty>
+                  <UseCPPCompiler>2</UseCPPCompiler>
+                  <RVCTCodeConst>0</RVCTCodeConst>
+                  <RVCTZI>0</RVCTZI>
+                  <RVCTOtherData>0</RVCTOtherData>
+                  <ModuleSelection>0</ModuleSelection>
+                  <IncludeInBuild>1</IncludeInBuild>
+                  <AlwaysBuild>2</AlwaysBuild>
+                  <GenerateAssemblyFile>2</GenerateAssemblyFile>
+                  <AssembleAssemblyFile>2</AssembleAssemblyFile>
+                  <PublicsOnly>2</PublicsOnly>
+                  <StopOnExitCode>11</StopOnExitCode>
+                  <CustomArgument></CustomArgument>
+                  <IncludeLibraryModules></IncludeLibraryModules>
+                  <ComprImg>1</ComprImg>
+                </CommonProperty>
+                <FileArmAds/>
+              </FileOption>
             </File>
           </Files>
         </Group>

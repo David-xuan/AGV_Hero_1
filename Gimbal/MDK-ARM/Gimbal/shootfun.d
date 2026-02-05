@@ -67,3 +67,22 @@ gimbal\shootfun.o: ../../phoenix_embedded_base_code/Module/Motor/Dji/dev_motor_d
 gimbal\shootfun.o: ../bsp/remote_control.h
 gimbal\shootfun.o: ../bsp/bsp_rc.h
 gimbal\shootfun.o: ../bsp/struct_typedef.h
+gimbal\shootfun.o: ../task/GimbalTask.h
+gimbal\shootfun.o: ../task/MinipcTask.h
+gimbal\shootfun.o: ../../phoenix_embedded_base_code/Module/Minipc/dev_minipc.h
+gimbal\shootfun.o: D:\Program Files (x86)\Keil MDK\ARM\ARMCC\Bin\..\include\stdio.h
+gimbal\shootfun.o: ../../phoenix_embedded_base_code/Module/Com_System/Com_System.h
+gimbal\shootfun.o: ../../phoenix_embedded_base_code/Module/Com_System/Queue.h
+gimbal\shootfun.o: ../USB_DEVICE/App/usbd_cdc_if.h
+gimbal\shootfun.o: ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h
+gimbal\shootfun.o: ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h
+gimbal\shootfun.o: ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h
+gimbal\shootfun.o: ../USB_DEVICE/Target/usbd_conf.h
+gimbal\shootfun.o: D:\Program Files (x86)\Keil MDK\ARM\ARMCC\Bin\..\include\stdlib.h
+gimbal\shootfun.o: ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h
+gimbal\shootfun.o: ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h
+gimbal\shootfun.o: ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h
+gimbal\shootfun.o: ../../phoenix_embedded_base_code/Bsp/Log/bsp_log.h
+gimbal\shootfun.o: ../../SEGGER_RTT/SEGGER_RTT.h
+gimbal\shootfun.o: ../../SEGGER_RTT/SEGGER_RTT_Conf.h
+gimbal\shootfun.o: D:\Program Files (x86)\Keil MDK\ARM\ARMCC\Bin\..\include\stdarg.h

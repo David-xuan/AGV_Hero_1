@@ -1,4 +1,6 @@
 #include "ShootFun.h"
+#include "GimbalTask.h"
+#include "MinipcTask.h"
 
 /*声明变量or函数*/
 void Shoot_Statemachine_2_Init(Shoot_t* shoot);
@@ -34,24 +36,51 @@ void Shoot_Mode_Choose(Shoot_t* shoot)
 {
 	if(rc_ctrl.rc.s[1] == 3)//仅在遥控模式下开启摩擦轮后可用
 		Shoot_Mode_choose_remote(shoot);
+	else if(rc_ctrl.rc.s[1] ==2)
+		Shoot_Mode_choose_keyboard(shoot);
 }
 
 
 /*遥控器模式选择*/
 void Shoot_Mode_choose_remote(Shoot_t* shoot)
 {
-				if(rc_ctrl.rc.ch[4]>500&&shoot->flag.wheel_shoot_flag==0)
-				{
-					shoot->Action = SINGLE;
-				}
-				else if(rc_ctrl.rc.ch[4]<100&&rc_ctrl.rc.ch[4]>-100)
-				{
-					shoot->flag.wheel_shoot_flag = 0;
-					shoot->Action = NORMAL;
-				}
+	if(rc_ctrl.rc.ch[4]>500&&shoot->flag.wheel_shoot_flag==0)
+	{
+		shoot->Action = SINGLE;
+	}
+	else if(rc_ctrl.rc.ch[4]<100&&rc_ctrl.rc.ch[4]>-100)
+	{
+		shoot->flag.wheel_shoot_flag = 0;
+		shoot->Action = NORMAL;
+	}
 }
 
-
+void Shoot_Mode_choose_keyboard(Shoot_t* shoot)
+{
+		if(Gimbal_action == GIMBAL_NORMAL)				//手瞄
+		{	//左键&&确保单发&&已完成上次打弹&&(非自瞄or自瞄且到位)
+			if(IF_MOUSE_PRESSED_LEFT&&(!shoot->flag.left_shoot_flag)&&shoot->flag.shoot_finish_flag)
+			{
+				shoot->Action = SINGLE;	
+			}
+			else if(!IF_MOUSE_PRESSED_LEFT)
+			{
+				shoot->flag.left_shoot_flag = 0;
+				shoot->Action = NORMAL;		
+			}
+		}
+		else if(Gimbal_action == GIMBAL_AUTO)			//自瞄
+		{				
+		
+			if((minipc->message.norm_aim_pack.find_bool == 49)&&IF_MOUSE_PRESSED_LEFT&&(!shoot->flag.left_shoot_flag)&&shoot->flag.shoot_finish_flag)
+				shoot->Action = SINGLE;	
+			else if(!IF_MOUSE_PRESSED_LEFT)
+			{
+				shoot->flag.left_shoot_flag = 0;
+				shoot->Action = NORMAL;	
+			}
+		}
+}
 /****************************************************************拨弹盘计算****************************************************************/
 void Shoot_clc(void)
 {
@@ -113,13 +142,27 @@ void Shoor_Ctl_NORMAL(Shoot_t* shoot)
 
 void Shoor_Ctl_SINGLE(Shoot_t* shoot)
 {
-	if((!shoot->flag.left_shoot_flag)||(!shoot->flag.wheel_shoot_flag))  //未执行过
+	if(rc_ctrl.rc.s[0] == 2 || Gimbal_action == GIMBAL_AUTO)                                    //自瞄
 	{
-		rammer->target_position -= 2.0f*PI/12.0f;		
-		shoot->flag.shoot_finish_flag = 0;		
-		shoot->flag.left_shoot_flag  	= 1;
-		shoot->flag.wheel_shoot_flag 	= 1;		
-		shoot->Action = NORMAL;	
+		if(((!shoot->flag.left_shoot_flag)||(!shoot->flag.wheel_shoot_flag))&&minipc->message.norm_aim_pack.find_bool == 49)  //未执行过
+		{
+			rammer->target_position -= 2.0f*PI/12.0f;		
+			shoot->flag.shoot_finish_flag = 0;		
+			shoot->flag.left_shoot_flag  	= 1;
+			shoot->flag.wheel_shoot_flag 	= 1;		
+			shoot->Action = NORMAL;	
+		}
+	}
+	else
+	{
+		if((!shoot->flag.left_shoot_flag)||(!shoot->flag.wheel_shoot_flag))
+		{
+			rammer->target_position -= 2.0f*PI/12.0f;		
+			shoot->flag.shoot_finish_flag = 0;		
+			shoot->flag.left_shoot_flag  	= 1;
+			shoot->flag.wheel_shoot_flag 	= 1;		
+			shoot->Action = NORMAL;	
+		}
 	}
 }
 
@@ -148,7 +191,7 @@ void Shoor_Ctl_STOP(Shoot_t* shoot)
 /* 状态机控制器 */
 void ShootSelate(Shoot_t* shoot)
 {
-		if(rc_ctrl.rc.s[1] == 3)
+		if(rc_ctrl.rc.s[1] == 3 || rc_ctrl.rc.s[1] == 2)
 			Shoot_Statemachine_2_Run(shoot);
 		else 
 			Shoot_Statemachine_2_Stop(shoot);

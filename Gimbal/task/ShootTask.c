@@ -9,8 +9,8 @@ DmMotorInstance_s *rammer = NULL;
 DmMotorInitConfig_s rammer_config={
     .can_config = {
         .can_number = 2,
-        .tx_id = 0x01,
-        .rx_id = 0x11,
+        .tx_id = 0x11,
+        .rx_id = 0x21,
     },
     .parameters = { 
         .pos_max = 3.14159f,
@@ -25,8 +25,8 @@ DmMotorInitConfig_s rammer_config={
     .topic_name = "1",
     .type = J4310,
     .velocity_pid_config = {
-        .kp = 1.0f,
-        .ki = 0.075f,
+        .kp = 0.65f,
+        .ki = 0.07f,
         .kd = 1.5f,
         .i_max = 2.0f,
         .out_max = 3.0f,
@@ -157,6 +157,7 @@ void ShootTask(void const * argument)
 {
 	rammer = Motor_DM_Register(&rammer_config);
     Motor_Dm_Cmd(rammer, DM_CMD_MOTOR_ENABLE);
+	Shoot_flag_Init(&Shoot);
     while(rammer->message.out_position == 0)
     {
 		rammer->output = 0;
@@ -172,7 +173,7 @@ void ShootTask(void const * argument)
 	for(;;)
 	{	
 
-		if(rc_ctrl.rc.s[0] == 3)
+		if(rc_ctrl.rc.s[0] == 3 || rc_ctrl.rc.s[0] == 2)
 		{
 			Motor_Dji_Control(wheel[0], -4950); 
 			Motor_Dji_Control(wheel[1], -4950); 
@@ -214,6 +215,6 @@ void ShootTask(void const * argument)
 		
         Motor_Dm_Mit_Control(rammer, 0.0f, 0.0f, rammer->output); 
         Motor_Dm_Transmit(rammer); 
-        osDelay(1);
+        osDelay(2);
 	}
 }

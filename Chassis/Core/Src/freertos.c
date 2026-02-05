@@ -52,6 +52,8 @@ osThreadId task_01Handle;
 osThreadId myTask03Handle;
 osThreadId myTask04Handle;
 osThreadId myTask05Handle;
+osThreadId myTask06Handle;
+osThreadId myTask07Handle;
 
 /* Private function prototypes -----------------------------------------------*/
 /* USER CODE BEGIN FunctionPrototypes */
@@ -63,6 +65,8 @@ void GimbalTask(void const * argument);
 void ChassisTask(void const * argument);
 void ShootTask(void const * argument);
 void UITask(void const * argument);
+void CanTask(void const * argument);
+void RefereeTask(void const * argument);
 
 void MX_FREERTOS_Init(void); /* (MISRA C 2004 rule 8.1) */
 
@@ -118,7 +122,7 @@ void MX_FREERTOS_Init(void) {
   task_01Handle = osThreadCreate(osThread(task_01), NULL);
 
   /* definition and creation of myTask03 */
-  osThreadDef(myTask03, ChassisTask, osPriorityIdle, 0, 128);
+  osThreadDef(myTask03, ChassisTask, osPriorityIdle, 0, 300);
   myTask03Handle = osThreadCreate(osThread(myTask03), NULL);
 
   /* definition and creation of myTask04 */
@@ -128,6 +132,14 @@ void MX_FREERTOS_Init(void) {
   /* definition and creation of myTask05 */
   osThreadDef(myTask05, UITask, osPriorityIdle, 0, 128);
   myTask05Handle = osThreadCreate(osThread(myTask05), NULL);
+
+  /* definition and creation of myTask06 */
+  osThreadDef(myTask06, CanTask, osPriorityIdle, 0, 128);
+  myTask06Handle = osThreadCreate(osThread(myTask06), NULL);
+
+  /* definition and creation of myTask07 */
+  osThreadDef(myTask07, RefereeTask, osPriorityIdle, 0, 1024);
+  myTask07Handle = osThreadCreate(osThread(myTask07), NULL);
 
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
@@ -223,6 +235,42 @@ __weak void UITask(void const * argument)
     osDelay(1);
   }
   /* USER CODE END UITask */
+}
+
+/* USER CODE BEGIN Header_CanTask */
+/**
+* @brief Function implementing the myTask06 thread.
+* @param argument: Not used
+* @retval None
+*/
+/* USER CODE END Header_CanTask */
+__weak void CanTask(void const * argument)
+{
+  /* USER CODE BEGIN CanTask */
+  /* Infinite loop */
+  for(;;)
+  {
+    osDelay(1);
+  }
+  /* USER CODE END CanTask */
+}
+
+/* USER CODE BEGIN Header_RefereeTask */
+/**
+* @brief Function implementing the myTask07 thread.
+* @param argument: Not used
+* @retval None
+*/
+/* USER CODE END Header_RefereeTask */
+__weak void RefereeTask(void const * argument)
+{
+  /* USER CODE BEGIN RefereeTask */
+  /* Infinite loop */
+  for(;;)
+  {
+    osDelay(1);
+  }
+  /* USER CODE END RefereeTask */
 }
 
 /* Private application code --------------------------------------------------*/

@@ -336,7 +336,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,STM32F407xx</Define>
               <Undefine></Undefine>
-              <IncludePath>../Core/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy;../Middlewares/Third_Party/FreeRTOS/Source/include;../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS;../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F;../Drivers/CMSIS/Device/ST/STM32F4xx/Include;../Drivers/CMSIS/Include;../task;../motor;../calculate;../bsp;../../phoenix_embedded_base_code/Bsp/Can;../../phoenix_embedded_base_code/Bsp/Fdcan;../../phoenix_embedded_base_code/Bsp/Log;../../SEGGER_RTT;../../phoenix_embedded_base_code/Algorithm/Pid;../../phoenix_embedded_base_code/Module/Motor/Dji;../../phoenix_embedded_base_code/Algorithm/Chassis_calc;..\..\phoenix_embedded_base_code\Module\Motor\Lk</IncludePath>
+              <IncludePath>../Core/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy;../Middlewares/Third_Party/FreeRTOS/Source/include;../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS;../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F;../Drivers/CMSIS/Device/ST/STM32F4xx/Include;../Drivers/CMSIS/Include;../task;../motor;../calculate;../bsp;../../phoenix_embedded_base_code/Bsp/Can;../../phoenix_embedded_base_code/Bsp/Fdcan;../../phoenix_embedded_base_code/Bsp/Log;../../SEGGER_RTT;../../phoenix_embedded_base_code/Algorithm/Pid;../../phoenix_embedded_base_code/Module/Motor/Dji;../../phoenix_embedded_base_code/Algorithm/Chassis_calc;../../phoenix_embedded_base_code/Module/Motor/Lk;../../phoenix_embedded_base_code/Module/Referee;../../phoenix_embedded_base_code/Bsp/Uart;../../phoenix_embedded_base_code/Module/Daemon;../../phoenix_embedded_base_code/Algorithm/Crc</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -751,26 +751,6 @@
           <GroupName>calculate</GroupName>
           <Files>
             <File>
-              <FileName>my_fun.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\calculate\my_fun.c</FilePath>
-            </File>
-            <File>
-              <FileName>my_fun.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\calculate\my_fun.h</FilePath>
-            </File>
-            <File>
-              <FileName>ShootFun.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\calculate\ShootFun.c</FilePath>
-            </File>
-            <File>
-              <FileName>ShootFun.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\calculate\ShootFun.h</FilePath>
-            </File>
-            <File>
               <FileName>alg_chassis_calc.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\phoenix_embedded_base_code\Algorithm\Chassis_calc\alg_chassis_calc.c</FilePath>
@@ -779,6 +759,26 @@
               <FileName>alg_chassis_calc.h</FileName>
               <FileType>5</FileType>
               <FilePath>..\..\phoenix_embedded_base_code\Algorithm\Chassis_calc\alg_chassis_calc.h</FilePath>
+            </File>
+            <File>
+              <FileName>ChassisFun.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\calculate\ChassisFun.c</FilePath>
+            </File>
+            <File>
+              <FileName>ChassisFun.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\calculate\ChassisFun.h</FilePath>
+            </File>
+            <File>
+              <FileName>GImbalFun.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\calculate\GImbalFun.c</FilePath>
+            </File>
+            <File>
+              <FileName>GImbalFun.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\calculate\GImbalFun.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -831,16 +831,6 @@
           <GroupName>task</GroupName>
           <Files>
             <File>
-              <FileName>ShootTask.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\task\ShootTask.c</FilePath>
-            </File>
-            <File>
-              <FileName>ShootTask.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\task\ShootTask.h</FilePath>
-            </File>
-            <File>
               <FileName>ChassisTask.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\task\ChassisTask.c</FilePath>
@@ -860,30 +850,100 @@
               <FileType>5</FileType>
               <FilePath>..\task\GimbalTask.h</FilePath>
             </File>
+            <File>
+              <FileName>CanTask.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\task\CanTask.c</FilePath>
+            </File>
+            <File>
+              <FileName>CanTask.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\task\CanTask.h</FilePath>
+            </File>
+            <File>
+              <FileName>RefereeTask.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\task\RefereeTask.c</FilePath>
+            </File>
+            <File>
+              <FileName>RefereeTask.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\task\RefereeTask.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
-          <GroupName>motor</GroupName>
+          <GroupName>uart</GroupName>
           <Files>
             <File>
-              <FileName>DJI3508.c</FileName>
+              <FileName>bsp_uart.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\motor\DJI3508.c</FilePath>
+              <FilePath>..\..\phoenix_embedded_base_code\Bsp\Uart\bsp_uart.c</FilePath>
             </File>
             <File>
-              <FileName>DJI3508.h</FileName>
+              <FileName>bsp_uart.h</FileName>
               <FileType>5</FileType>
-              <FilePath>..\motor\DJI3508.h</FilePath>
+              <FilePath>..\..\phoenix_embedded_base_code\Bsp\Uart\bsp_uart.h</FilePath>
             </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>Referee</GroupName>
+          <Files>
             <File>
-              <FileName>DM4310.c</FileName>
+              <FileName>dev_referee.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\motor\DM4310.c</FilePath>
+              <FilePath>..\..\phoenix_embedded_base_code\Module\Referee\dev_referee.c</FilePath>
             </File>
             <File>
-              <FileName>DM4310.h</FileName>
+              <FileName>dev_referee.h</FileName>
               <FileType>5</FileType>
-              <FilePath>..\motor\DM4310.h</FilePath>
+              <FilePath>..\..\phoenix_embedded_base_code\Module\Referee\dev_referee.h</FilePath>
+            </File>
+            <File>
+              <FileName>dev_referee_protocol.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\phoenix_embedded_base_code\Module\Referee\dev_referee_protocol.h</FilePath>
+            </File>
+            <File>
+              <FileName>dev_referee_ui.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\phoenix_embedded_base_code\Module\Referee\dev_referee_ui.c</FilePath>
+            </File>
+            <File>
+              <FileName>dev_referee_ui.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\phoenix_embedded_base_code\Module\Referee\dev_referee_ui.h</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>Daemon</GroupName>
+          <Files>
+            <File>
+              <FileName>dev_daemon.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\phoenix_embedded_base_code\Module\Daemon\dev_daemon.c</FilePath>
+            </File>
+            <File>
+              <FileName>dev_daemon.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\phoenix_embedded_base_code\Module\Daemon\dev_daemon.h</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>Crc</GroupName>
+          <Files>
+            <File>
+              <FileName>alg_crc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\phoenix_embedded_base_code\Algorithm\Crc\alg_crc.c</FilePath>
+            </File>
+            <File>
+              <FileName>alg_crc.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\phoenix_embedded_base_code\Algorithm\Crc\alg_crc.h</FilePath>
             </File>
           </Files>
         </Group>

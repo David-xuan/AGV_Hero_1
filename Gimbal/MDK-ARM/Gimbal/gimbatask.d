@@ -43,6 +43,8 @@ gimbal\gimbatask.o: D:\Program Files (x86)\Keil MDK\ARM\ARMCC\Bin\..\include\std
 gimbal\gimbatask.o: ../bsp/remote_control.h
 gimbal\gimbatask.o: ../bsp/bsp_rc.h
 gimbal\gimbatask.o: ../bsp/struct_typedef.h
+gimbal\gimbatask.o: ../../phoenix_embedded_base_code/Module/Motor/Dm/dev_motor_dm.h
+gimbal\gimbatask.o: ../../phoenix_embedded_base_code/Bsp/Can/robot_config.h
 gimbal\gimbatask.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h
 gimbal\gimbatask.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
 gimbal\gimbatask.o: ../Core/Inc/FreeRTOSConfig.h
@@ -57,12 +59,29 @@ gimbal\gimbatask.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h
 gimbal\gimbatask.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h
 gimbal\gimbatask.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h
 gimbal\gimbatask.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h
-gimbal\gimbatask.o: ../../phoenix_embedded_base_code/Module/Motor/Dm/dev_motor_dm.h
-gimbal\gimbatask.o: ../../phoenix_embedded_base_code/Bsp/Can/robot_config.h
-gimbal\gimbatask.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h
 gimbal\gimbatask.o: ../../phoenix_embedded_base_code/Bsp/Can/bsp_can.h
 gimbal\gimbatask.o: ../Core/Inc/can.h
 gimbal\gimbatask.o: D:\Program Files (x86)\Keil MDK\ARM\ARMCC\Bin\..\include\math.h
 gimbal\gimbatask.o: D:\Program Files (x86)\Keil MDK\ARM\ARMCC\Bin\..\include\string.h
 gimbal\gimbatask.o: ../../phoenix_embedded_base_code/Algorithm/Pid/alg_pid.h
 gimbal\gimbatask.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h
+gimbal\gimbatask.o: ../calculate/GimbalFun.h
+gimbal\gimbatask.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h
+gimbal\gimbatask.o: ..\task\MinipcTask.h
+gimbal\gimbatask.o: ../../phoenix_embedded_base_code/Module/Minipc/dev_minipc.h
+gimbal\gimbatask.o: D:\Program Files (x86)\Keil MDK\ARM\ARMCC\Bin\..\include\stdio.h
+gimbal\gimbatask.o: ../../phoenix_embedded_base_code/Module/Com_System/Com_System.h
+gimbal\gimbatask.o: ../../phoenix_embedded_base_code/Module/Com_System/Queue.h
+gimbal\gimbatask.o: ../USB_DEVICE/App/usbd_cdc_if.h
+gimbal\gimbatask.o: ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h
+gimbal\gimbatask.o: ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h
+gimbal\gimbatask.o: ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h
+gimbal\gimbatask.o: ../USB_DEVICE/Target/usbd_conf.h
+gimbal\gimbatask.o: D:\Program Files (x86)\Keil MDK\ARM\ARMCC\Bin\..\include\stdlib.h
+gimbal\gimbatask.o: ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h
+gimbal\gimbatask.o: ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h
+gimbal\gimbatask.o: ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h
+gimbal\gimbatask.o: ../../phoenix_embedded_base_code/Bsp/Log/bsp_log.h
+gimbal\gimbatask.o: ../../SEGGER_RTT/SEGGER_RTT.h
+gimbal\gimbatask.o: ../../SEGGER_RTT/SEGGER_RTT_Conf.h
+gimbal\gimbatask.o: D:\Program Files (x86)\Keil MDK\ARM\ARMCC\Bin\..\include\stdarg.h

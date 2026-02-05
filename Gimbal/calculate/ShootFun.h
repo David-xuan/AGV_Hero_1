@@ -12,6 +12,7 @@ void Clean_Shoot_CtrlMsg(Shoot_t* shoot);
 
 
 void Shoot_Mode_choose_remote(Shoot_t* shoot);
+void Shoot_Mode_choose_keyboard(Shoot_t* shoot);
 void Shoot_Mode_Choose(Shoot_t* shoot);
 
 extern void Shoot_clc(void);

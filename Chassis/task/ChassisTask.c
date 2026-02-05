@@ -1,4 +1,5 @@
 #include "ChassisTask.h"
+#include "ChassisFun.h"
 #include "cmsis_os.h"
 #include "dev_motor_dji.h"
 #include "alg_chassis_calc.h"
@@ -8,24 +9,25 @@
 	ChassisInstance_s *Chassis;
 	static ChassisInitConfig_s Chassis_config = {
 	.type = Steering_Wheel,
-	.gimbal_yaw_zero = 0.178709f,
+	.gimbal_yaw_zero = 2.887143f,
+	.Gyroscope_Speed = 0.5,
 	.omni_steering_message={
 	.wheel_radius= 0.058f,
 	.chassis_radius= 0.259f,
 	},    
-	.gimbal_steering_zero[0] = 0.3889f,
-	.gimbal_steering_zero[1] = 1.2088f,
-	.gimbal_steering_zero[2] = -0.1212f,
-	.gimbal_steering_zero[3] = -0.1166f,
+	.gimbal_steering_zero[0] = 0.4172f,
+	.gimbal_steering_zero[1] = 1.1904f,
+	.gimbal_steering_zero[2] = -0.1143f,
+	.gimbal_steering_zero[3] = -0.1058f,
 	.gimbal_steering_normal[0] = -0.3421f,
 	.gimbal_steering_normal[1] = 1.9742f,
 	.gimbal_steering_normal[2] = 0.8399f,
 	.gimbal_steering_normal[3] = -0.9027f,
 	.gimbal_follow_pid_config={
-	.kp = 0.0f,
+	.kp = -0.8f,
     .ki = 0.0f,
     .kd = 0.0f,
-	.dead_zone = 0.05f,
+	.dead_zone = 0.01f,
     .i_max = 0.0f,
     .out_max = 2 * 3.141593f,
 	},
@@ -112,10 +114,10 @@
 	.tx_id=0x1FE,
     },
     .velocity_pid_config={
-    .kp = 120.0f,
-    .ki = 1.1f,
+    .kp = 150.0f,
+    .ki = 1.8f,
     .kd = 0.0f,
-    .i_max = 4000.0f,
+    .i_max = 4500.0f,
     .out_max = 16384.0f,
     },
 	.angle_pid_config={
@@ -139,7 +141,7 @@
     },
     .velocity_pid_config={
     .kp = 120.0f,
-    .ki = 1.1f,
+    .ki = 1.8f,
     .kd = 0.0f,
     .i_max = 4000.0f,
     .out_max = 16384.0f,
@@ -165,7 +167,7 @@
     },
     .velocity_pid_config={
     .kp = 120.0f,
-    .ki = 1.1f,
+    .ki = 1.4f,
     .kd = 0.0f,
     .i_max = 4000.0f,
     .out_max = 16384.0f,
@@ -190,8 +192,8 @@
 	.tx_id=0x1FE,
     },
     .velocity_pid_config={
-    .kp = 125.0f,
-    .ki = 1.0f,
+    .kp = 150.0f,
+    .ki = 1.8f,
     .kd = 0.0f,
     .i_max = 4000.0f,
     .out_max = 16384.0f,
@@ -210,13 +212,21 @@
 void ChassisTask(void const * argument)
 {
 	Chassis = Chassis_Register(&Chassis_config);
-    for(;;){
+    for(;;)
+	{
 		Chassis->gimbal_yaw_angle = yaw_motor->out_position;
-		Chassis->Chassis_speed.Vy = -0.003*rc_ctrl.rc.ch[2];
-		Chassis->Chassis_speed.Vx = 0.003*rc_ctrl.rc.ch[3];
-		Chassis_Change_Mode(Chassis,CHASSIS_NORMAL);
+		if(rc_ctrl.rc.s[1] == 2)									//¼üÊó
+		{
+			Chassis_Choose_keyboard(Chassis);
+			Chassis_Keyboard_Move_Calculate(1 ,10 ,50);
+		}
+		else														//Ò£¿ØÆ÷
+		{
+			Chassis_Choose_remote(Chassis);
+			Chassis->Chassis_speed.Vy = -0.003*rc_ctrl.rc.ch[2];
+			Chassis->Chassis_speed.Vx = 0.003*rc_ctrl.rc.ch[3];
+		}
 		Chassis_Control(Chassis);
-		osDelay(1);
-		
+		osDelay(2);
 	}
 }
