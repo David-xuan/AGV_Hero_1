@@ -88,23 +88,23 @@ void Shoot_clc(void)
 	{
 		case NORMAL:
 		{
-			Shoor_Ctl_NORMAL(&Shoot);		//计算并保持当前位置				
+			Shoot_Ctl_NORMAL(&Shoot);		//计算并保持当前位置				
 			break;
 		}
 		case SINGLE:
 		{
-			Shoor_Ctl_SINGLE(&Shoot);		//单发
+			Shoot_Ctl_SINGLE(&Shoot);		//单发
 			break;
 		}
 		case STOP:
 		{			
-			Shoor_Ctl_STOP(&Shoot);			//本用于防卡弹，但疑似会因此出现双发（并不确定，感觉可能性不大但是保险起见暂时不做卡弹处理）
+			Shoot_Ctl_STOP(&Shoot);			//本用于防卡弹，但疑似会因此出现双发（并不确定，感觉可能性不大但是保险起见暂时不做卡弹处理）
 			break;
 		}    
 	}
 
 }
-void Shoor_Ctl_NORMAL(Shoot_t* shoot)
+void Shoot_Ctl_NORMAL(Shoot_t* shoot)
 {
 	while(rammer->target_position < -PI)
 		rammer->target_position += 2*PI;
@@ -127,20 +127,9 @@ void Shoor_Ctl_NORMAL(Shoot_t* shoot)
 			rammer->target_position += 4.0f*PI/12.0f;
 		}
 	}
-/***************裁判系统发射机构断电后保持现位，防止上电发射************/
-//	if(!Game_Robot_State.power_management_shooter_output)
-//		shoot->flag.judge_on_flag = 0;
-//	else if(Game_Robot_State.power_management_shooter_output == 1&&shoot->flag.judge_on_flag == 0)
-//	{
-//		shoot->flag.judge_on_flag = 1;
-//		Motor_4310_Rammer.target_angle = Motor_4310_Rammer.angle;
-//	}
 }
 
-
-
-
-void Shoor_Ctl_SINGLE(Shoot_t* shoot)
+void Shoot_Ctl_SINGLE(Shoot_t* shoot)
 {
 	if(rc_ctrl.rc.s[0] == 2 || Gimbal_action == GIMBAL_AUTO)                                    //自瞄
 	{
@@ -150,7 +139,6 @@ void Shoor_Ctl_SINGLE(Shoot_t* shoot)
 			shoot->flag.shoot_finish_flag = 0;		
 			shoot->flag.left_shoot_flag  	= 1;
 			shoot->flag.wheel_shoot_flag 	= 1;		
-			shoot->Action = NORMAL;	
 		}
 	}
 	else
@@ -161,18 +149,24 @@ void Shoor_Ctl_SINGLE(Shoot_t* shoot)
 			shoot->flag.shoot_finish_flag = 0;		
 			shoot->flag.left_shoot_flag  	= 1;
 			shoot->flag.wheel_shoot_flag 	= 1;		
-			shoot->Action = NORMAL;	
 		}
 	}
+//	
+//	while(rammer->target_position < -PI)
+//		rammer->target_position += 2*PI;
+//	while(rammer->target_position > PI)
+//		rammer->target_position -= 2*PI;
+//	Motor_Dm_Control(rammer, rammer->target_position); 
+//	while(fabsf(rammer->target_position - rammer->message.out_position)>0.02f)
+//	{
+//		Motor_Dm_Mit_Control(rammer, 0.0f, 0.0f, rammer->output); 
+//		Motor_Dm_Transmit(rammer); 
+//	}
+//	rammer->target_position += 0.3*PI/12.0f;
+	shoot->Action = NORMAL;
 }
 
-//void Shoor_Ctl_BERSERK(Shoot_t* shoot)
-//{
-//	motor.Rammer.Vpid.goal = 4;
-//	DM_speed_control(&motor.Rammer);
-//}
-
-void Shoor_Ctl_STOP(Shoot_t* shoot)
+void Shoot_Ctl_STOP(Shoot_t* shoot)
 {
 	rammer->output = 0;
 	shoot->flag.shoot_stop_time++;

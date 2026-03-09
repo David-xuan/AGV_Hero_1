@@ -1,10 +1,10 @@
-gimbal\alg_kalman.o: ..\IMU_Libs\Kalman\alg_kalman.c
-gimbal\alg_kalman.o: ../Middlewares/ST/ARM/DSP/Inc/arm_math.h
-gimbal\alg_kalman.o: ../Drivers/CMSIS/Include/cmsis_compiler.h
-gimbal\alg_kalman.o: D:\Program Files (x86)\Keil MDK\ARM\ARMCC\Bin\..\include\stdint.h
-gimbal\alg_kalman.o: ../Drivers/CMSIS/Include/cmsis_armcc.h
-gimbal\alg_kalman.o: D:\Program Files (x86)\Keil MDK\ARM\ARMCC\Bin\..\include\string.h
-gimbal\alg_kalman.o: D:\Program Files (x86)\Keil MDK\ARM\ARMCC\Bin\..\include\math.h
-gimbal\alg_kalman.o: D:\Program Files (x86)\Keil MDK\ARM\ARMCC\Bin\..\include\float.h
-gimbal\alg_kalman.o: D:\Program Files (x86)\Keil MDK\ARM\ARMCC\Bin\..\include\limits.h
-gimbal\alg_kalman.o: ..\IMU_Libs\Kalman\alg_kalman.h
+gimbal/alg_kalman.o: ..\IMU_Libs\Kalman\alg_kalman.c \
+  ..\Middlewares\ST\ARM\DSP\Inc\arm_math.h \
+  ..\Drivers\CMSIS\Include\cmsis_compiler.h \
+  D:\Program\ Files\ (x86)\Keil\ MDK\ARM\ARMCLANG\Bin\..\include\stdint.h \
+  ..\Drivers\CMSIS\Include\cmsis_armclang.h \
+  D:\Program\ Files\ (x86)\Keil\ MDK\ARM\ARMCLANG\Bin\..\include\string.h \
+  D:\Program\ Files\ (x86)\Keil\ MDK\ARM\ARMCLANG\Bin\..\include\math.h \
+  D:\Program\ Files\ (x86)\Keil\ MDK\ARM\ARMCLANG\Bin\..\include\float.h \
+  D:\Program\ Files\ (x86)\Keil\ MDK\ARM\ARMCLANG\Bin\..\include\limits.h \
+  ..\IMU_Libs\Kalman\alg_kalman.h

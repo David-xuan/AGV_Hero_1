@@ -1,12 +1,12 @@
-gimbal\list.o: ../Middlewares/Third_Party/FreeRTOS/Source/list.c
-gimbal\list.o: D:\Program Files (x86)\Keil MDK\ARM\ARMCC\Bin\..\include\stdlib.h
-gimbal\list.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
-gimbal\list.o: D:\Program Files (x86)\Keil MDK\ARM\ARMCC\Bin\..\include\stddef.h
-gimbal\list.o: D:\Program Files (x86)\Keil MDK\ARM\ARMCC\Bin\..\include\stdint.h
-gimbal\list.o: ../Core/Inc/FreeRTOSConfig.h
-gimbal\list.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
-gimbal\list.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
-gimbal\list.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
-gimbal\list.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F/portmacro.h
-gimbal\list.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
-gimbal\list.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h
+gimbal/list.o: ..\Middlewares\Third_Party\FreeRTOS\Source\list.c \
+  D:\Program\ Files\ (x86)\Keil\ MDK\ARM\ARMCLANG\Bin\..\include\stdlib.h \
+  ..\Middlewares\Third_Party\FreeRTOS\Source\include\FreeRTOS.h \
+  D:\Program\ Files\ (x86)\Keil\ MDK\ARM\ARMCLANG\Bin\..\include\stddef.h \
+  D:\Program\ Files\ (x86)\Keil\ MDK\ARM\ARMCLANG\Bin\..\include\stdint.h \
+  ..\Core\Inc\FreeRTOSConfig.h \
+  ..\Middlewares\Third_Party\FreeRTOS\Source\include\projdefs.h \
+  ..\Middlewares\Third_Party\FreeRTOS\Source\include\portable.h \
+  ..\Middlewares\Third_Party\FreeRTOS\Source\include\deprecated_definitions.h \
+  ..\Middlewares\Third_Party\FreeRTOS\Source\portable\RVDS\ARM_CM4F\portmacro.h \
+  ..\Middlewares\Third_Party\FreeRTOS\Source\include\mpu_wrappers.h \
+  ..\Middlewares\Third_Party\FreeRTOS\Source\include\list.h

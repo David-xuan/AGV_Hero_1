@@ -315,3 +315,49 @@ void LowpassFilter_Free(LowpassFilter_t *filter) {
         vPortFree(filter);
     }
 }
+
+
+
+/**
+ * @brief 快速平方根倒数计算函数
+ * @param x 输入值
+ * @return 输入值的平方根倒数
+ */
+float invSqrt(float x) {
+    float halfx = 0.5f * x;
+    float y = x;
+    long i = *(long *)&y;
+    i = 0x5f3759df - (i >> 1);
+    y = *(float *)&i;
+    y = y * (1.5f - (halfx * y * y));
+    return y;
+}
+/**
+ * @brief 符号函数
+ * @param x 输入值
+ * @return 符号函数结果
+ */
+int sgn(int x){
+    return x == 0 ? 0 : x > 0 ? 1 : -1;
+}
+/**
+ * @brief 类符号函数
+ * @param x 输入值
+ * @param d 死区范围
+ * @return 类符号函数结果
+ */
+int fsgn(float x) {
+    return (x != 0.0f ? (x < 0.0f ? -1 : 1) : 0);
+}
+/**
+ * @brief 带死区的类符号函数
+ * @param x 输入值
+ * @param d 死区范围
+ * @return 带死区的类符号函数结果
+ */
+float sgn_like(float x, float d) {
+    if (fabs(x) >= d)
+        return fsgn(x);
+    else
+        return x / d;
+}

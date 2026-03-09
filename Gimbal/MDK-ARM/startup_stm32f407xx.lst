@@ -841,18 +841,18 @@ ARM Macro Assembler    Page 13
               00000400 
               00000200 
               00000000 
-Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M4.fp --apcs=int
-erwork --depend=gimbal\startup_stm32f407xx.d -ogimbal\startup_stm32f407xx.o -I.
+Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M4.fp --depend=g
+imbal\startup_stm32f407xx.d -ogimbal\startup_stm32f407xx.o -I../Core/Inc -I.\RT
 
 
 
 ARM Macro Assembler    Page 14 
 
 
-./Core/Inc -I.\RTE\_Gimbal -I"D:\Program Files (x86)\Keil MDK\ARM\PACK\ARM\CMSI
-S\5.8.0\CMSIS\Core\Include" --predefine="__UVISION_VERSION SETA 524" --predefin
-e="_RTE_ SETA 1" --predefine="STM32F407xx SETA 1" --list=startup_stm32f407xx.ls
-t startup_stm32f407xx.s
+E\_Gimbal -I"D:\Program Files (x86)\Keil MDK\ARM\PACK\ARM\CMSIS\5.8.0\CMSIS\Cor
+e\Include" --predefine="__UVISION_VERSION SETA 524" --predefine="_RTE_ SETA 1" 
+--predefine="STM32F407xx SETA 1" --list=startup_stm32f407xx.lst startup_stm32f4
+07xx.s
 
 
 

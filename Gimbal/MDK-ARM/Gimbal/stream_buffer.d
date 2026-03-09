@@ -1,14 +1,15 @@
-gimbal\stream_buffer.o: ../Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c
-gimbal\stream_buffer.o: D:\Program Files (x86)\Keil MDK\ARM\ARMCC\Bin\..\include\stdint.h
-gimbal\stream_buffer.o: D:\Program Files (x86)\Keil MDK\ARM\ARMCC\Bin\..\include\string.h
-gimbal\stream_buffer.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
-gimbal\stream_buffer.o: D:\Program Files (x86)\Keil MDK\ARM\ARMCC\Bin\..\include\stddef.h
-gimbal\stream_buffer.o: ../Core/Inc/FreeRTOSConfig.h
-gimbal\stream_buffer.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
-gimbal\stream_buffer.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
-gimbal\stream_buffer.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
-gimbal\stream_buffer.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F/portmacro.h
-gimbal\stream_buffer.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
-gimbal\stream_buffer.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h
-gimbal\stream_buffer.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h
-gimbal\stream_buffer.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/stream_buffer.h
+gimbal/stream_buffer.o: \
+  ..\Middlewares\Third_Party\FreeRTOS\Source\stream_buffer.c \
+  D:\Program\ Files\ (x86)\Keil\ MDK\ARM\ARMCLANG\Bin\..\include\stdint.h \
+  D:\Program\ Files\ (x86)\Keil\ MDK\ARM\ARMCLANG\Bin\..\include\string.h \
+  ..\Middlewares\Third_Party\FreeRTOS\Source\include\FreeRTOS.h \
+  D:\Program\ Files\ (x86)\Keil\ MDK\ARM\ARMCLANG\Bin\..\include\stddef.h \
+  ..\Core\Inc\FreeRTOSConfig.h \
+  ..\Middlewares\Third_Party\FreeRTOS\Source\include\projdefs.h \
+  ..\Middlewares\Third_Party\FreeRTOS\Source\include\portable.h \
+  ..\Middlewares\Third_Party\FreeRTOS\Source\include\deprecated_definitions.h \
+  ..\Middlewares\Third_Party\FreeRTOS\Source\portable\RVDS\ARM_CM4F\portmacro.h \
+  ..\Middlewares\Third_Party\FreeRTOS\Source\include\mpu_wrappers.h \
+  ..\Middlewares\Third_Party\FreeRTOS\Source\include\task.h \
+  ..\Middlewares\Third_Party\FreeRTOS\Source\include\list.h \
+  ..\Middlewares\Third_Party\FreeRTOS\Source\include\stream_buffer.h

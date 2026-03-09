@@ -16,10 +16,10 @@ void Shoot_Mode_choose_keyboard(Shoot_t* shoot);
 void Shoot_Mode_Choose(Shoot_t* shoot);
 
 extern void Shoot_clc(void);
-void Shoor_Ctl_STOP(Shoot_t* shoot);
-void Shoor_Ctl_SINGLE(Shoot_t* shoot);
-void Shoor_Ctl_NORMAL(Shoot_t* shoot);
-
+void Shoot_Ctl_STOP(Shoot_t* shoot);
+void Shoot_Ctl_SINGLE(Shoot_t* shoot);
+void Shoot_Ctl_NORMAL(Shoot_t* shoot);
+void Shoot_Ctl_BACK(Shoot_t* shoot);
 
 extern void ShootSelate(Shoot_t* shoot);
 extern void Shoot_Statemachine_2_Init(Shoot_t* shoot);

@@ -1,14 +1,13 @@
-gimbal\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/croutine.c
-gimbal\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
-gimbal\croutine.o: D:\Program Files (x86)\Keil MDK\ARM\ARMCC\Bin\..\include\stddef.h
-gimbal\croutine.o: D:\Program Files (x86)\Keil MDK\ARM\ARMCC\Bin\..\include\stdint.h
-gimbal\croutine.o: ../Core/Inc/FreeRTOSConfig.h
-gimbal\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
-gimbal\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
-gimbal\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
-gimbal\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F/portmacro.h
-gimbal\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
-gimbal\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h
-gimbal\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h
-gimbal\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/croutine.h
-gimbal\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h
+gimbal/croutine.o: ..\Middlewares\Third_Party\FreeRTOS\Source\croutine.c \
+  ..\Middlewares\Third_Party\FreeRTOS\Source\include\FreeRTOS.h \
+  D:\Program\ Files\ (x86)\Keil\ MDK\ARM\ARMCLANG\Bin\..\include\stddef.h \
+  D:\Program\ Files\ (x86)\Keil\ MDK\ARM\ARMCLANG\Bin\..\include\stdint.h \
+  ..\Core\Inc\FreeRTOSConfig.h \
+  ..\Middlewares\Third_Party\FreeRTOS\Source\include\projdefs.h \
+  ..\Middlewares\Third_Party\FreeRTOS\Source\include\portable.h \
+  ..\Middlewares\Third_Party\FreeRTOS\Source\include\deprecated_definitions.h \
+  ..\Middlewares\Third_Party\FreeRTOS\Source\portable\RVDS\ARM_CM4F\portmacro.h \
+  ..\Middlewares\Third_Party\FreeRTOS\Source\include\mpu_wrappers.h \
+  ..\Middlewares\Third_Party\FreeRTOS\Source\include\task.h \
+  ..\Middlewares\Third_Party\FreeRTOS\Source\include\list.h \
+  ..\Middlewares\Third_Party\FreeRTOS\Source\include\croutine.h

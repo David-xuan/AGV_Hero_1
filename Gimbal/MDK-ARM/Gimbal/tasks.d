@@ -1,16 +1,17 @@
-gimbal\tasks.o: ../Middlewares/Third_Party/FreeRTOS/Source/tasks.c
-gimbal\tasks.o: D:\Program Files (x86)\Keil MDK\ARM\ARMCC\Bin\..\include\stdlib.h
-gimbal\tasks.o: D:\Program Files (x86)\Keil MDK\ARM\ARMCC\Bin\..\include\string.h
-gimbal\tasks.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
-gimbal\tasks.o: D:\Program Files (x86)\Keil MDK\ARM\ARMCC\Bin\..\include\stddef.h
-gimbal\tasks.o: D:\Program Files (x86)\Keil MDK\ARM\ARMCC\Bin\..\include\stdint.h
-gimbal\tasks.o: ../Core/Inc/FreeRTOSConfig.h
-gimbal\tasks.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
-gimbal\tasks.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
-gimbal\tasks.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
-gimbal\tasks.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F/portmacro.h
-gimbal\tasks.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
-gimbal\tasks.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h
-gimbal\tasks.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h
-gimbal\tasks.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h
-gimbal\tasks.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/stack_macros.h
+gimbal/tasks.o: ..\Middlewares\Third_Party\FreeRTOS\Source\tasks.c \
+  D:\Program\ Files\ (x86)\Keil\ MDK\ARM\ARMCLANG\Bin\..\include\stdlib.h \
+  D:\Program\ Files\ (x86)\Keil\ MDK\ARM\ARMCLANG\Bin\..\include\string.h \
+  ..\Middlewares\Third_Party\FreeRTOS\Source\include\FreeRTOS.h \
+  D:\Program\ Files\ (x86)\Keil\ MDK\ARM\ARMCLANG\Bin\..\include\stddef.h \
+  D:\Program\ Files\ (x86)\Keil\ MDK\ARM\ARMCLANG\Bin\..\include\stdint.h \
+  ..\Core\Inc\FreeRTOSConfig.h \
+  ..\Middlewares\Third_Party\FreeRTOS\Source\include\projdefs.h \
+  ..\Middlewares\Third_Party\FreeRTOS\Source\include\portable.h \
+  ..\Middlewares\Third_Party\FreeRTOS\Source\include\deprecated_definitions.h \
+  ..\Middlewares\Third_Party\FreeRTOS\Source\portable\RVDS\ARM_CM4F\portmacro.h \
+  ..\Middlewares\Third_Party\FreeRTOS\Source\include\mpu_wrappers.h \
+  ..\Middlewares\Third_Party\FreeRTOS\Source\include\task.h \
+  ..\Middlewares\Third_Party\FreeRTOS\Source\include\list.h \
+  ..\Middlewares\Third_Party\FreeRTOS\Source\include\timers.h \
+  ..\Middlewares\Third_Party\FreeRTOS\Source\include\task.h \
+  ..\Middlewares\Third_Party\FreeRTOS\Source\include\stack_macros.h

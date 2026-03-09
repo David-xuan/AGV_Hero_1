@@ -19,7 +19,8 @@ typedef enum
 		NORMAL    = 0x00,
 		SINGLE 		= 0x01,
 		BERSERK	  = 0x02,  //连发
-		STOP      = 0x03   //卡弹or裁判系统下电
+		STOP      = 0x03,   //卡弹or裁判系统下电
+		BACK	  = 0x04
 }Shoot_Action_t;
 
 typedef struct

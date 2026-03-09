@@ -1,7 +1,13 @@
+
 #ifndef ALG_FLITER_H
 #define ALG_FLITER_H
 #include "arm_math.h" // ARM CMSIS数学库
 #include "FreeRTOS.h"
+
+
+#define pi 3.1415926f
+#define RAD2DEG 180.0f / pi
+#define DEG2RAD pi / 180.0f
 
 //定义回调函数类型
 typedef struct {
@@ -53,4 +59,12 @@ void MovingAvgFilter_Free(MovingAvgFilter_t *filter);
 void LowpassFilter_Free(LowpassFilter_t *filter);
 float32_t fhan(float32_t x1, float32_t x2, float32_t r, float32_t h0);
 float fhan_correct(float x1, float x2, float r, float h);
+
+
+
+
+float invSqrt(float x);
+int sgn(int x);
+int fsgn(float x);
+float sgn_like(float x, float d);
 #endif

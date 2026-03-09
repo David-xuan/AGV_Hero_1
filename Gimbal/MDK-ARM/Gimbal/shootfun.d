@@ -1,88 +1,85 @@
-gimbal\shootfun.o: ..\calculate\ShootFun.c
-gimbal\shootfun.o: ..\calculate\ShootFun.h
-gimbal\shootfun.o: ../task/ShootTask.h
-gimbal\shootfun.o: ../Core/Inc/main.h
-gimbal\shootfun.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h
-gimbal\shootfun.o: ../Core/Inc/stm32f4xx_hal_conf.h
-gimbal\shootfun.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h
-gimbal\shootfun.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h
-gimbal\shootfun.o: ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h
-gimbal\shootfun.o: ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h
-gimbal\shootfun.o: ../Drivers/CMSIS/Include/core_cm4.h
-gimbal\shootfun.o: D:\Program Files (x86)\Keil MDK\ARM\ARMCC\Bin\..\include\stdint.h
-gimbal\shootfun.o: ../Drivers/CMSIS/Include/cmsis_version.h
-gimbal\shootfun.o: ../Drivers/CMSIS/Include/cmsis_compiler.h
-gimbal\shootfun.o: ../Drivers/CMSIS/Include/cmsis_armcc.h
-gimbal\shootfun.o: ../Drivers/CMSIS/Include/mpu_armv7.h
-gimbal\shootfun.o: ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h
-gimbal\shootfun.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h
-gimbal\shootfun.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h
-gimbal\shootfun.o: D:\Program Files (x86)\Keil MDK\ARM\ARMCC\Bin\..\include\stddef.h
-gimbal\shootfun.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h
-gimbal\shootfun.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h
-gimbal\shootfun.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio_ex.h
-gimbal\shootfun.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_exti.h
-gimbal\shootfun.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h
-gimbal\shootfun.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h
-gimbal\shootfun.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h
-gimbal\shootfun.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_can.h
-gimbal\shootfun.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h
-gimbal\shootfun.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h
-gimbal\shootfun.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h
-gimbal\shootfun.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c.h
-gimbal\shootfun.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c_ex.h
-gimbal\shootfun.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h
-gimbal\shootfun.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h
-gimbal\shootfun.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h
-gimbal\shootfun.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h
-gimbal\shootfun.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h
-gimbal\shootfun.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
-gimbal\shootfun.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h
-gimbal\shootfun.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h
-gimbal\shootfun.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h
-gimbal\shootfun.o: D:\Program Files (x86)\Keil MDK\ARM\ARMCC\Bin\..\include\stdbool.h
-gimbal\shootfun.o: ../../phoenix_embedded_base_code/Module/Motor/Dm/dev_motor_dm.h
-gimbal\shootfun.o: ../../phoenix_embedded_base_code/Bsp/Can/robot_config.h
-gimbal\shootfun.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h
-gimbal\shootfun.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
-gimbal\shootfun.o: ../Core/Inc/FreeRTOSConfig.h
-gimbal\shootfun.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
-gimbal\shootfun.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
-gimbal\shootfun.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
-gimbal\shootfun.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F/portmacro.h
-gimbal\shootfun.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
-gimbal\shootfun.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h
-gimbal\shootfun.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h
-gimbal\shootfun.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h
-gimbal\shootfun.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h
-gimbal\shootfun.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h
-gimbal\shootfun.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h
-gimbal\shootfun.o: ../../phoenix_embedded_base_code/Bsp/Can/bsp_can.h
-gimbal\shootfun.o: ../Core/Inc/can.h
-gimbal\shootfun.o: D:\Program Files (x86)\Keil MDK\ARM\ARMCC\Bin\..\include\math.h
-gimbal\shootfun.o: D:\Program Files (x86)\Keil MDK\ARM\ARMCC\Bin\..\include\string.h
-gimbal\shootfun.o: ../../phoenix_embedded_base_code/Algorithm/Pid/alg_pid.h
-gimbal\shootfun.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h
-gimbal\shootfun.o: ../../phoenix_embedded_base_code/Module/Motor/Dji/dev_motor_dji.h
-gimbal\shootfun.o: ../bsp/remote_control.h
-gimbal\shootfun.o: ../bsp/bsp_rc.h
-gimbal\shootfun.o: ../bsp/struct_typedef.h
-gimbal\shootfun.o: ../task/GimbalTask.h
-gimbal\shootfun.o: ../task/MinipcTask.h
-gimbal\shootfun.o: ../../phoenix_embedded_base_code/Module/Minipc/dev_minipc.h
-gimbal\shootfun.o: D:\Program Files (x86)\Keil MDK\ARM\ARMCC\Bin\..\include\stdio.h
-gimbal\shootfun.o: ../../phoenix_embedded_base_code/Module/Com_System/Com_System.h
-gimbal\shootfun.o: ../../phoenix_embedded_base_code/Module/Com_System/Queue.h
-gimbal\shootfun.o: ../USB_DEVICE/App/usbd_cdc_if.h
-gimbal\shootfun.o: ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h
-gimbal\shootfun.o: ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h
-gimbal\shootfun.o: ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h
-gimbal\shootfun.o: ../USB_DEVICE/Target/usbd_conf.h
-gimbal\shootfun.o: D:\Program Files (x86)\Keil MDK\ARM\ARMCC\Bin\..\include\stdlib.h
-gimbal\shootfun.o: ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h
-gimbal\shootfun.o: ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h
-gimbal\shootfun.o: ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h
-gimbal\shootfun.o: ../../phoenix_embedded_base_code/Bsp/Log/bsp_log.h
-gimbal\shootfun.o: ../../SEGGER_RTT/SEGGER_RTT.h
-gimbal\shootfun.o: ../../SEGGER_RTT/SEGGER_RTT_Conf.h
-gimbal\shootfun.o: D:\Program Files (x86)\Keil MDK\ARM\ARMCC\Bin\..\include\stdarg.h
+gimbal/shootfun.o: ..\calculate\ShootFun.c ..\calculate\ShootFun.h \
+  ..\task\ShootTask.h ..\Core\Inc\main.h \
+  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h \
+  ..\Core\Inc\stm32f4xx_hal_conf.h \
+  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rcc.h \
+  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_def.h \
+  ..\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h \
+  ..\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f407xx.h \
+  ..\Drivers\CMSIS\Include\core_cm4.h \
+  D:\Program\ Files\ (x86)\Keil\ MDK\ARM\ARMCLANG\Bin\..\include\stdint.h \
+  ..\Drivers\CMSIS\Include\cmsis_version.h \
+  ..\Drivers\CMSIS\Include\cmsis_compiler.h \
+  ..\Drivers\CMSIS\Include\cmsis_armclang.h \
+  ..\Drivers\CMSIS\Include\mpu_armv7.h \
+  ..\Drivers\CMSIS\Device\ST\STM32F4xx\Include\system_stm32f4xx.h \
+  ..\Drivers\STM32F4xx_HAL_Driver\Inc\Legacy\stm32_hal_legacy.h \
+  D:\Program\ Files\ (x86)\Keil\ MDK\ARM\ARMCLANG\Bin\..\include\stddef.h \
+  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rcc_ex.h \
+  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_gpio.h \
+  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_gpio_ex.h \
+  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_exti.h \
+  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_dma.h \
+  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_dma_ex.h \
+  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_cortex.h \
+  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_can.h \
+  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_flash.h \
+  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_flash_ex.h \
+  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_flash_ramfunc.h \
+  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_i2c.h \
+  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_i2c_ex.h \
+  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pwr.h \
+  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pwr_ex.h \
+  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_spi.h \
+  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_tim.h \
+  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_tim_ex.h \
+  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_uart.h \
+  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pcd.h \
+  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_usb.h \
+  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pcd_ex.h \
+  D:\Program\ Files\ (x86)\Keil\ MDK\ARM\ARMCLANG\Bin\..\include\stdbool.h \
+  ..\..\phoenix_embedded_base_code\Module\Motor\Dm\dev_motor_dm.h \
+  ..\..\phoenix_embedded_base_code\Bsp\Can\robot_config.h \
+  ..\Middlewares\Third_Party\FreeRTOS\Source\CMSIS_RTOS\cmsis_os.h \
+  ..\Middlewares\Third_Party\FreeRTOS\Source\include\FreeRTOS.h \
+  ..\Core\Inc\FreeRTOSConfig.h \
+  ..\Middlewares\Third_Party\FreeRTOS\Source\include\projdefs.h \
+  ..\Middlewares\Third_Party\FreeRTOS\Source\include\portable.h \
+  ..\Middlewares\Third_Party\FreeRTOS\Source\include\deprecated_definitions.h \
+  ..\Middlewares\Third_Party\FreeRTOS\Source\portable\RVDS\ARM_CM4F\portmacro.h \
+  ..\Middlewares\Third_Party\FreeRTOS\Source\include\mpu_wrappers.h \
+  ..\Middlewares\Third_Party\FreeRTOS\Source\include\task.h \
+  ..\Middlewares\Third_Party\FreeRTOS\Source\include\list.h \
+  ..\Middlewares\Third_Party\FreeRTOS\Source\include\timers.h \
+  ..\Middlewares\Third_Party\FreeRTOS\Source\include\task.h \
+  ..\Middlewares\Third_Party\FreeRTOS\Source\include\queue.h \
+  ..\Middlewares\Third_Party\FreeRTOS\Source\include\semphr.h \
+  ..\Middlewares\Third_Party\FreeRTOS\Source\include\queue.h \
+  ..\Middlewares\Third_Party\FreeRTOS\Source\include\event_groups.h \
+  ..\Middlewares\Third_Party\FreeRTOS\Source\include\timers.h \
+  ..\..\phoenix_embedded_base_code\Bsp\Can\bsp_can.h \
+  ..\..\phoenix_embedded_base_code\Bsp\Can\robot_config.h \
+  ..\Core\Inc\can.h ..\Core\Inc\main.h \
+  D:\Program\ Files\ (x86)\Keil\ MDK\ARM\ARMCLANG\Bin\..\include\math.h \
+  D:\Program\ Files\ (x86)\Keil\ MDK\ARM\ARMCLANG\Bin\..\include\string.h \
+  ..\..\phoenix_embedded_base_code\Algorithm\Pid\alg_pid.h \
+  ..\..\phoenix_embedded_base_code\Module\Motor\Dji\dev_motor_dji.h \
+  ..\bsp\remote_control.h ..\bsp\bsp_rc.h ..\bsp\struct_typedef.h \
+  ..\task\GimbalTask.h ..\task\MinipcTask.h \
+  ..\..\phoenix_embedded_base_code\Module\Minipc\dev_minipc.h \
+  D:\Program\ Files\ (x86)\Keil\ MDK\ARM\ARMCLANG\Bin\..\include\stdio.h \
+  ..\..\phoenix_embedded_base_code\Module\Com_System\Com_System.h \
+  ..\..\phoenix_embedded_base_code\Module\Com_System\Queue.h \
+  ..\USB_DEVICE\App\usbd_cdc_if.h \
+  ..\Middlewares\ST\STM32_USB_Device_Library\Class\CDC\Inc\usbd_cdc.h \
+  ..\Middlewares\ST\STM32_USB_Device_Library\Core\Inc\usbd_ioreq.h \
+  ..\Middlewares\ST\STM32_USB_Device_Library\Core\Inc\usbd_def.h \
+  ..\USB_DEVICE\Target\usbd_conf.h \
+  D:\Program\ Files\ (x86)\Keil\ MDK\ARM\ARMCLANG\Bin\..\include\stdlib.h \
+  ..\Middlewares\ST\STM32_USB_Device_Library\Core\Inc\usbd_core.h \
+  ..\Middlewares\ST\STM32_USB_Device_Library\Core\Inc\usbd_ioreq.h \
+  ..\Middlewares\ST\STM32_USB_Device_Library\Core\Inc\usbd_ctlreq.h \
+  ..\..\phoenix_embedded_base_code\Bsp\Log\bsp_log.h \
+  ..\..\SEGGER_RTT\SEGGER_RTT.h ..\..\SEGGER_RTT\SEGGER_RTT_Conf.h \
+  D:\Program\ Files\ (x86)\Keil\ MDK\ARM\ARMCLANG\Bin\..\include\stdarg.h \
+  ..\..\SEGGER_RTT\SEGGER_RTT_Conf.h

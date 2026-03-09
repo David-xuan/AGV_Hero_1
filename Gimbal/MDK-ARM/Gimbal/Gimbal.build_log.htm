@@ -9,12 +9,12 @@ License Information: David,  , LIC=X96CK-ZBZK4-MMV9I-TJN2W-NF08L-L0ICZ
  
 Tool Versions:
 Toolchain:       MDK-ARM Plus  Version: 5.36.0.0
-Toolchain Path:  D:\Program Files (x86)\Keil MDK\ARM\ARMCC\Bin
-C Compiler:      Armcc.exe V5.06 update 7 (build 960)
-Assembler:       Armasm.exe V5.06 update 7 (build 960)
-Linker/Locator:  ArmLink.exe V5.06 update 7 (build 960)
-Library Manager: ArmAr.exe V5.06 update 7 (build 960)
-Hex Converter:   FromElf.exe V5.06 update 7 (build 960)
+Toolchain Path:  D:\Program Files (x86)\Keil MDK\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.16
+Assembler:       Armasm.exe V6.16
+Linker/Locator:  ArmLink.exe V6.16
+Library Manager: ArmAr.exe V6.16
+Hex Converter:   FromElf.exe V6.16
 CPU DLL:         SARMCM3.DLL V5.36.0.0
 Dialog DLL:      DCM.DLL V1.17.3.0
 Target DLL:      Segger\JL2CM3.dll V2.99.40.0
@@ -22,12 +22,28 @@ Dialog DLL:      TCM.DLL V1.53.0.0
  
 <h2>Project:</h2>
 D:\BaiduNetdiskDownload\CubemxProject\AGV_Hero_1\Gimbal\MDK-ARM\Gimbal.uvprojx
-Project File Date:  02/03/2026
+Project File Date:  02/05/2026
 
 <h2>Output:</h2>
-*** Using Compiler 'V5.06 update 7 (build 960)', folder: 'D:\Program Files (x86)\Keil MDK\ARM\ARMCC\Bin'
+*** Using Compiler 'V6.16', folder: 'D:\Program Files (x86)\Keil MDK\ARM\ARMCLANG\Bin'
 Build target 'Gimbal'
-"Gimbal\Gimbal.axf" - 0 Error(s), 0 Warning(s).
+../calculate/ShootFun.c(1): warning: In file included from...
+../calculate/ShootFun.h(5): warning: In file included from...
+../bsp\remote_control.h(63): warning: 'packed' attribute ignored [-Wignored-attributes]
+typedef __packed struct
+        ^
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h(116): note: expanded from macro '__packed'
+    #define __packed  __attribute__((packed))
+                                     ^
+../calculate/ShootFun.c(87): warning: enumeration values 'BERSERK' and 'BACK' not handled in switch [-Wswitch]
+        switch(Shoot.Action)
+               ^
+2 warnings generated.
+compiling ShootFun.c...
+linking...
+Program Size: Code=50864 RO-data=1828 RW-data=1480 ZI-data=28440  
+FromELF: creating hex file...
+"Gimbal\Gimbal.axf" - 0 Error(s), 2 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -50,7 +66,7 @@ Package Vendor: Keil
 
    * Component: ARM::CMSIS:CORE:5.5.0
       Include file:  CMSIS\Core\Include\tz_context.h
-Build Time Elapsed:  00:00:00
+Build Time Elapsed:  00:00:01
 </pre>
 </body>
 </html>
