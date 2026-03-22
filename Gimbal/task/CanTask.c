@@ -24,6 +24,10 @@ static void bc_2_Decode(CanInstance_s *can_instance){
     }
 	rc_ctrl.mouse.press_l = can_instance->rx_buff[0];
 	rc_ctrl.mouse.press_r = can_instance->rx_buff[1];
+	Yaw_angle_t.yaw_angle.buff[0] = can_instance->rx_buff[2];
+	Yaw_angle_t.yaw_angle.buff[1] = can_instance->rx_buff[3];
+	Yaw_angle_t.yaw_angle.buff[2] = can_instance->rx_buff[4];
+	Yaw_angle_t.yaw_angle.buff[3] = can_instance->rx_buff[5];
 }
 
 CanInstance_s *bc_1,*bc_2;
@@ -48,10 +52,10 @@ void CanTask(void const * argument){
     bc_1 = Can_Register(&bc_config1);
 	bc_2 = Can_Register(&bc_config2);
     for(;;){
-		Yaw_angle_t.Yaw_angle.value = -Quater.yaw;
+		Yaw_angle_t.imu_yaw.value = -Quater.yaw;
 		Yaw_angle_t.vison_yaw.value = -minipc->message.norm_aim_pack.yaw;
-		uint8_t tx_buf[8] = {Yaw_angle_t.Yaw_angle.buff[0], Yaw_angle_t.Yaw_angle.buff[1],
-							 Yaw_angle_t.Yaw_angle.buff[2], Yaw_angle_t.Yaw_angle.buff[3],
+		uint8_t tx_buf[8] = {Yaw_angle_t.imu_yaw.buff[0], Yaw_angle_t.imu_yaw.buff[1],
+							 Yaw_angle_t.imu_yaw.buff[2], Yaw_angle_t.imu_yaw.buff[3],
 							 Yaw_angle_t.vison_yaw.buff[0], Yaw_angle_t.vison_yaw.buff[1], 
 							 Yaw_angle_t.vison_yaw.buff[2], Yaw_angle_t.vison_yaw.buff[3]};
 		memcpy(bc_1->tx_buff, tx_buf, 8);

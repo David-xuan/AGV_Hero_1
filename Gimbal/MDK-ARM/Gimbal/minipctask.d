@@ -90,4 +90,4 @@ gimbal/minipctask.o: ..\task\MinipcTask.c ..\task\MinipcTask.h \
   ..\IMU_Libs\Madgwick\MadgwickAHRS.h ..\IMU_Libs\alg_fliter.h \
   ..\IMU_Libs\Madgwick\Fusion_AHRS.h ..\IMU_Libs\BMI088\dev_bmi088.h \
   ..\IMU_Libs\SPI\bsp_spi.h ..\Core\Inc\spi.h ..\IMU_Libs\alg_fliter.h \
-  ..\IMU_Libs\bsp_pwm.h ..\Core\Inc\tim.h
+  ..\IMU_Libs\bsp_pwm.h ..\Core\Inc\tim.h ..\task\CanTask.h

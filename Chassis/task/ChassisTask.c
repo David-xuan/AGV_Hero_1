@@ -10,7 +10,7 @@
 	static ChassisInitConfig_s Chassis_config = {
 	.type = Steering_Wheel,
 	.gimbal_yaw_zero = 2.887143f,
-	.Gyroscope_Speed = 0.5,
+	.Gyroscope_Speed = 1,
 	.omni_steering_message={
 	.wheel_radius= 0.058f,
 	.chassis_radius= 0.259f,
@@ -140,7 +140,7 @@
 	.tx_id=0x1FE,
     },
     .velocity_pid_config={
-    .kp = 120.0f,
+    .kp = 80.0f,
     .ki = 1.8f,
     .kd = 0.0f,
     .i_max = 4000.0f,
@@ -192,8 +192,8 @@
 	.tx_id=0x1FE,
     },
     .velocity_pid_config={
-    .kp = 150.0f,
-    .ki = 1.8f,
+    .kp = 120.0f,
+    .ki = 1.4f,
     .kd = 0.0f,
     .i_max = 4000.0f,
     .out_max = 16384.0f,
@@ -207,11 +207,92 @@
 	.out_max = 200.0f,
 	},
   }
-  };
+};
+
+DjiMotorInstance_s *chassis[4];
+chassisInitConfig chassis_config = {
+	.config[0] = {
+    .type = M3508,
+    .control_mode = DJI_VELOCITY,
+    .reduction_ratio = 1.0f,
+    .topic_name = "1",
+    .can_config = {
+    .can_number=1,
+	.rx_id=0x205,	
+	.tx_id=0x1FF,
+    },
+    .velocity_pid_config={
+    .kp = 40.0f,
+    .ki = 0.3f,
+    .kd = 0.0f,
+    .i_max = 1800.0f,
+    .out_max = 10000.0f,
+    },
+  },
+	.config[1] = {
+    .type = M3508,
+    .control_mode = DJI_VELOCITY,
+    .reduction_ratio = 1.0f,
+    .topic_name = "1",
+    .can_config = {
+    .can_number=1,
+	.rx_id=0x206,	
+	.tx_id=0x1FF,
+    },
+    .velocity_pid_config={
+    .kp = 40.0f,
+    .ki = 0.3f,
+    .kd = 0.0f,
+    .i_max = 1800.0f,
+    .out_max = 10000.0f,
+    },
+  },
+	.config[2] = {
+    .type = M3508,
+    .control_mode = DJI_POSITION,
+    .reduction_ratio = 1.0f,
+    .topic_name = "1",
+    .can_config = {
+    .can_number=1,
+	.rx_id=0x207,	
+	.tx_id=0x1FF,
+    },
+    .velocity_pid_config={
+    .kp = 0.0f,
+    .ki = 0.0f,
+    .kd = 0.0f,
+    .i_max = 1800.0f,
+    .out_max = 10000.0f,
+    },
+  },
+	.config[3] = {
+    .type = M3508,
+    .control_mode = DJI_POSITION,
+    .reduction_ratio = 1.0f,
+    .topic_name = "1",
+    .can_config = {
+    .can_number=1,
+	.rx_id=0x208,	
+	.tx_id=0x1FF,
+    },
+    .velocity_pid_config={
+    .kp = 0.0f,
+    .ki = 0.0f,
+    .kd = 0.0f,
+    .i_max = 1800.0f,
+    .out_max = 10000.0f,
+    },
+  },
+};
 
 void ChassisTask(void const * argument)
 {
 	Chassis = Chassis_Register(&Chassis_config);
+	for(int i=0;i<4;i++)
+	{
+		chassis[i] = Motor_Dji_Register(&chassis_config.config[i]);
+	}
+
     for(;;)
 	{
 		Chassis->gimbal_yaw_angle = yaw_motor->out_position;
@@ -227,6 +308,15 @@ void ChassisTask(void const * argument)
 			Chassis->Chassis_speed.Vx = 0.003*rc_ctrl.rc.ch[3];
 		}
 		Chassis_Control(Chassis);
+		
+//		if(rc_ctrl.rc.ch[3] > 400)
+//		{
+			Motor_Dji_Control(chassis[0],-2000);
+			Motor_Dji_Control(chassis[1],2000);
+//		}
+		Motor_Dji_Transmit(chassis[0]);
+		Motor_Dji_Transmit(chassis[1]);
+		
 		osDelay(2);
 	}
 }

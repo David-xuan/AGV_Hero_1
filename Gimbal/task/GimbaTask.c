@@ -68,8 +68,8 @@ void GimbalTask(void const * argument)
 				pitch->target_position += 0.0000003f*rc_ctrl.rc.ch[1];
 		}
 		
-		if(pitch->target_position < -0.18f)
-			pitch->target_position = -0.18f;
+		if(pitch->target_position < -0.07f)
+			pitch->target_position = -0.07f;
 		else if (pitch->target_position > 0.68f)
 			pitch->target_position = 0.68f;
 		Motor_Dm_Control(pitch, pitch->target_position); 

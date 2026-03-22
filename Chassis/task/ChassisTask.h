@@ -7,6 +7,9 @@
 extern ChassisInstance_s *Chassis;
 
 
+typedef struct {
+    DjiMotorInitConfig_s config[4];        
+}chassisInitConfig;
 
 
 #endif

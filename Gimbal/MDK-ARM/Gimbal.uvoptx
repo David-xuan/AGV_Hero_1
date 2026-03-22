@@ -120,6 +120,7 @@
         <SetRegEntry>
           <Number>0</Number>
           <Key>DLGUARM</Key>
+          <Name>/</Name>
         </SetRegEntry>
         <SetRegEntry>
           <Number>0</Number>
@@ -193,6 +194,16 @@
           <count>7</count>
           <WinNumber>1</WinNumber>
           <ItemText>bmi088_test</ItemText>
+        </Ww>
+        <Ww>
+          <count>8</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>Yaw_angle_t</ItemText>
+        </Ww>
+        <Ww>
+          <count>9</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>\\Gimbal\../task/GimbaTask.c\pitch-&gt;target_velocity</ItemText>
         </Ww>
       </WatchWindow1>
       <Tracepoint>
@@ -1188,7 +1199,7 @@
 
   <Group>
     <GroupName>calculate</GroupName>
-    <tvExp>1</tvExp>
+    <tvExp>0</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <RteFlg>0</RteFlg>
@@ -1444,7 +1455,7 @@
 
   <Group>
     <GroupName>Minipc</GroupName>
-    <tvExp>0</tvExp>
+    <tvExp>1</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <RteFlg>0</RteFlg>

@@ -10,13 +10,18 @@ typedef struct
         uint8_t buff[4];
         float value;
 		
-    }Yaw_angle;
+    }imu_yaw;
     union
     {
         uint8_t buff[4];
         float value;
 		
     }vison_yaw;	
+	union
+	{
+		uint8_t buff[4];
+		float value;
+	}yaw_angle;
 }angle_measure_t;
 
 extern angle_measure_t Gimbal_msg;

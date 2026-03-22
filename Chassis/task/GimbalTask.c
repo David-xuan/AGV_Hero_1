@@ -20,14 +20,14 @@ static LkMotorInitConfig_s config = {
 	.tx_id=0x280,
 	},
 	.velocity_pid_config={
-    .kp = 0.8f,
-    .ki = 0.02f,
+    .kp = 0.52,//0.8f,
+    .ki = 0.02,//0.02f,
     .kd = 0.0f,
     .i_max = 200.0f,
     .out_max = 400.0f,
     },
 	.angle_pid_config={
-	.kp = 6000.0f,
+	.kp = 6500,//6500.0f,
 	.ki = 0.0f,
 	.kd = 0.0f,
 	.angle_max =2*PI,	
@@ -42,7 +42,7 @@ void GimbalTask(void const * argument)
 	while(yaw_motor->target_position == 0)
     {
 		Motor_LK_Transmit(yaw_motor);
-//		target_position = yaw_motor->out_position;
+//		yaw_motor->target_position = yaw_motor->out_position;
 		yaw_motor->target_position = yaw_motor->imu_position;
 		osDelay(1);
 	}
@@ -58,15 +58,15 @@ void GimbalTask(void const * argument)
 			if(rc_ctrl.rc.s[0] == 2)
 				yaw_motor->target_position = Gimbal_msg.vison_yaw.value;
 			else
-				yaw_motor->target_position += 0.000001*rc_ctrl.rc.ch[0];
+				yaw_motor->target_position += 0.000005*rc_ctrl.rc.ch[0];//0.000001
 		}
 		while(yaw_motor->target_position < -PI)
 		yaw_motor->target_position += 2*PI;
 		while(yaw_motor->target_position > PI)
 		yaw_motor->target_position -= 2*PI;
-//		Motor_Lk_Control(yaw_motor,target_position);
+//		Motor_Lk_Control(yaw_motor,yaw_motor->target_position);
 		Motor_Lk_gyro_Control(yaw_motor,yaw_motor->target_position);
 		Motor_LK_Transmit(yaw_motor);
-		osDelay(1);
+		osDelay(2);
 	}
 }

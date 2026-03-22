@@ -175,12 +175,12 @@ void ShootTask(void const * argument)
 
 		if(rc_ctrl.rc.s[0] == 3 || rc_ctrl.rc.s[0] == 2)
 		{
-			Motor_Dji_Control(wheel[0], 4950); 
-			Motor_Dji_Control(wheel[1], 4950); 
-			Motor_Dji_Control(wheel[2], 4950); 
-			Motor_Dji_Control(wheel[3], 4950); 
-			Motor_Dji_Control(wheel[4], 4950); 
-			Motor_Dji_Control(wheel[5], 4950); 
+			Motor_Dji_Control(wheel[0], 5100); 
+			Motor_Dji_Control(wheel[1], 5100); 
+			Motor_Dji_Control(wheel[2], 5100); 
+			Motor_Dji_Control(wheel[3], 5100); 
+			Motor_Dji_Control(wheel[4], 5100); 
+			Motor_Dji_Control(wheel[5], 5100); 
 		}
 		else
 		{
